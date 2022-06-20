@@ -4,14 +4,16 @@ using BKShop.Data.EF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BKShop.Data.Migrations
 {
     [DbContext(typeof(BKShopDbContext))]
-    partial class BKShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220620060327_seedingDataUser")]
+    partial class seedingDataUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
