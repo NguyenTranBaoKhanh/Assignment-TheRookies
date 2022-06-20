@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace BKShop.Data.Entities
 {
-    public class Brand
+    internal class Brand
     {
-
-        public int Id { get; set; }
-        public string Name { get; set; }
-
-        public List<Product> Products { set; get; }
     }
 }

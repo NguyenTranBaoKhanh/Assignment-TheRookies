@@ -14,7 +14,7 @@ namespace BKShop.Data.Entities
         public Guid UserId { get; set; }
         public User User { get; set; }
         public string Address { get; set; }
-        public string Phone { get; set; }
+        public string Phone {get; set; }
         public DateTime? DeliveryDate { get; set; }
         public DateTime? CreatedDate { get; set; }
     }
