@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace BKShop.Data.Configurations
 {
-    public class ProductConfiguration : IEntityTypeConfiguration<Category>
+    public class ProductConfiguration : IEntityTypeConfiguration<Product>
     {
-        public void Configure(EntityTypeBuilder<Category> builder)
+        public void Configure(EntityTypeBuilder<Product> builder)
         {
             builder.Property(x => x.Name).IsRequired();
+            builder.Property(x => x.Price).HasColumnType("decimal(10, 2)");
+
         }
     }
 }

@@ -16,6 +16,7 @@ namespace BKShop.Data.Configurations
             builder.HasKey(c => new { c.OrderId, c.ProductId });
 
             builder.Property(x => x.Amount).HasDefaultValue(1);
+            builder.Property(x => x.Price).HasColumnType("decimal(10, 2)");
         }
     }
 }

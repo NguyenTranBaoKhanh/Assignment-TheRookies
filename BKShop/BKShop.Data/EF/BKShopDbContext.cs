@@ -1,6 +1,5 @@
 ﻿using BKShop.Data.Configurations;
 using BKShop.Data.Entities;
-using BKShop.Data.Extentions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -39,7 +38,7 @@ namespace BKShop.Data.EF
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("UserTokens").HasKey(x => x.UserId);
 
             //Data seeding
-            modelBuilder.Seed();
+            //modelBuilder.Seed();
             //base.OnModelCreating(modelBuilder);
         }
 
