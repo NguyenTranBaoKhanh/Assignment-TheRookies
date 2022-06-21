@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cAcxWgepvyO+NBjzFsXC5efB1xm1zOTApNx4WmdlkoQ=",
+  "Source": "BKShop.API",
+  "BasePath": "_content/BKShop.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
