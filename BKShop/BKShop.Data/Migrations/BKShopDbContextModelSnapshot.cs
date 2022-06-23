@@ -36,7 +36,7 @@ namespace BKShop.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
 
                     b.HasData(
                         new
@@ -103,7 +103,7 @@ namespace BKShop.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Carts", (string)null);
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("BKShop.Data.Entities.Category", b =>
@@ -120,7 +120,7 @@ namespace BKShop.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
 
                     b.HasData(
                         new
@@ -207,7 +207,7 @@ namespace BKShop.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
 
                     b.HasData(
                         new
@@ -290,7 +290,7 @@ namespace BKShop.Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderDetails", (string)null);
+                    b.ToTable("OrderDetails");
 
                     b.HasData(
                         new
@@ -397,7 +397,7 @@ namespace BKShop.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
 
                     b.HasData(
                         new
@@ -477,14 +477,14 @@ namespace BKShop.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reviews", (string)null);
+                    b.ToTable("Reviews");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Comment = "Máy đẹp",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2600),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4582),
                             ProductId = 1,
                             Star = 5,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -493,7 +493,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 2,
                             Comment = "Tuyệt lắm",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2615),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4593),
                             ProductId = 1,
                             Star = 4,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -502,7 +502,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 3,
                             Comment = "Máy hơi yếu",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2617),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4594),
                             ProductId = 2,
                             Star = 2,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -511,7 +511,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 4,
                             Comment = "Máy còn yếu lắm",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2619),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4596),
                             ProductId = 2,
                             Star = 3,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -520,7 +520,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 5,
                             Comment = "Ngon đó",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2620),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4598),
                             ProductId = 2,
                             Star = 4,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -529,7 +529,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 6,
                             Comment = "Good",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2622),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4599),
                             ProductId = 3,
                             Star = 5,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -538,7 +538,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 7,
                             Comment = "Yeah",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2624),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4601),
                             ProductId = 3,
                             Star = 4,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -547,7 +547,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 8,
                             Comment = "Đây là comment",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2625),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4602),
                             ProductId = 3,
                             Star = 4,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -556,7 +556,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 9,
                             Comment = "Màu sắc đẹp",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2627),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4656),
                             ProductId = 2,
                             Star = 5,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -565,7 +565,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 10,
                             Comment = "Máy mạnh",
-                            DateCreated = new DateTime(2022, 6, 21, 1, 2, 53, 711, DateTimeKind.Local).AddTicks(2629),
+                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4658),
                             ProductId = 1,
                             Star = 5,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -598,7 +598,7 @@ namespace BKShop.Data.Migrations
                         new
                         {
                             Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "407c5516-6f40-4fdf-9686-4aec2cd334f0",
+                            ConcurrencyStamp = "5a40f906-40db-45a4-86e6-cf749538712b",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -606,7 +606,7 @@ namespace BKShop.Data.Migrations
                         new
                         {
                             Id = new Guid("54ba416f-6b89-4c53-873d-4fbd48506e6d"),
-                            ConcurrencyStamp = "e0db8cee-f6aa-4d25-8516-7660e255733b",
+                            ConcurrencyStamp = "14607d96-10c1-4993-a92c-718231d68793",
                             Description = "Customer role",
                             Name = "customer",
                             NormalizedName = "customer"
@@ -683,14 +683,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "a62a7677-4b87-4986-8e25-506ae04e66b5",
+                            ConcurrencyStamp = "c91a7bf7-b40a-4ded-bd6b-d45f122c39e0",
                             Email = "khanh@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Bao Khanh",
                             NormalizedEmail = "khanh@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAED3smuTZt23MMNIA6B0KXWywzmqNye7Qn7f+86ECc4z+bMG4LBXULgq3S1rEybKdYQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPq603p3FnDN6qm28ni6iDM1DhGGd4TNlLLkLX1QBXz5L+rUzf3P7wOaKRT30JqE/Q==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -702,14 +702,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("bff91064-dc92-421e-a233-d1080f630928"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "4cdd6a7b-cc0f-46b7-99b1-e4324a109c0a",
+                            ConcurrencyStamp = "521cd808-2c64-44b4-bb6b-aea851363348",
                             Email = "customer1@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Bao Khanh Customer",
                             NormalizedEmail = "customer1@gmail.com",
                             NormalizedUserName = "customer",
-                            PasswordHash = "AQAAAAEAACcQAAAAELz2ux/XkTZRpFxtA0vVdrjYF5SbL2cBo+cT4rnF6whQBeJZkrk7XimwuFH5jmidqQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEInX3MvKa/rU8SgsugsR2U4FM3qbvtgGBAl8VPAKBnzWfKImdqSXyusYgCwCj19Now==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -721,14 +721,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("bff91054-dc92-421e-a233-d1080f630928"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "b3f3457c-da0e-4887-a046-763f8c6500ec",
+                            ConcurrencyStamp = "ad167f4f-958f-48f3-b698-edaaa95c4ef0",
                             Email = "customer2@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "David",
                             NormalizedEmail = "customer2@gmail.com",
                             NormalizedUserName = "customer",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBtyEZTgaG+8nP6RiwmtoiTDwrvCULaQIx2gv4865imXH2ehgaV1/r5BHuWyzSxb4g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIrGawJsO3eesvzhxRujRwC+nkPf9d99hkkR4tOqbEK+sSPhpGg1PYa4AM7+hGGJnA==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -860,7 +860,7 @@ namespace BKShop.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("BKShop.Data.Entities.User", "User")
-                        .WithMany("Carts")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -873,7 +873,7 @@ namespace BKShop.Data.Migrations
             modelBuilder.Entity("BKShop.Data.Entities.Order", b =>
                 {
                     b.HasOne("BKShop.Data.Entities.User", "User")
-                        .WithMany("Orders")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -903,13 +903,13 @@ namespace BKShop.Data.Migrations
             modelBuilder.Entity("BKShop.Data.Entities.Product", b =>
                 {
                     b.HasOne("BKShop.Data.Entities.Brand", "Brand")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("BrandId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BKShop.Data.Entities.Category", "Category")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -938,26 +938,9 @@ namespace BKShop.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("BKShop.Data.Entities.Brand", b =>
-                {
-                    b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("BKShop.Data.Entities.Category", b =>
-                {
-                    b.Navigation("Products");
-                });
-
             modelBuilder.Entity("BKShop.Data.Entities.Product", b =>
                 {
                     b.Navigation("Reviews");
-                });
-
-            modelBuilder.Entity("BKShop.Data.Entities.User", b =>
-                {
-                    b.Navigation("Carts");
-
-                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

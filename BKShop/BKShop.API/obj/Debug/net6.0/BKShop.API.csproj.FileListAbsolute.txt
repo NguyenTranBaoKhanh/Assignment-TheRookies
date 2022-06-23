@@ -66,3 +66,5 @@ D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\runtimes
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\BKShop.Data.dll
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\BKShop.Data.pdb
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\FluentAssertions.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\Humanizer.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

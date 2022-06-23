@@ -12,6 +12,6 @@ namespace BKShop.Data.Entities
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public List<Product> Products { set; get; }
+        //public List<Product> Products { set; get; }
     }
 }
