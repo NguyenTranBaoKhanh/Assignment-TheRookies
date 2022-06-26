@@ -2,6 +2,9 @@ using BKShop.Data.EF;
 using Microsoft.Extensions.Configuration;
 
 using Microsoft.EntityFrameworkCore;
+using BKShop.Application.Interfaces;
+using BKShop.Application.Services;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +18,29 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CORS",
+                      policy =>
+                      {
+                          policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                      });
+});
 builder.Services.AddDbContext<BKShopDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
+builder.Services.AddControllers();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "BKShop.Api", Version = "v1" });
+});
+//Declare DI
+builder.Services.AddTransient<ICategoryService, CategoryService>();
+builder.Services.AddTransient<IProductService, ProductService>();
+
+
 
 var app = builder.Build();
 
@@ -29,6 +53,7 @@ if (app.Environment.IsDevelopment())
 
 }
 
+app.UseCors("CORS");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

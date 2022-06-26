@@ -77,3 +77,9 @@ D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\Newtonso
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\obj\Debug\net6.0\BKShop.API.RazorAssemblyInfo.cache
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\obj\Debug\net6.0\BKShop.API.RazorAssemblyInfo.cs
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\BKShop.Application.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\BKShop.Utilities.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\BKShop.ViewModels.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\BKShop.Application.pdb
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\BKShop.Utilities.pdb
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.API\bin\Debug\net6.0\BKShop.ViewModels.pdb

@@ -3038,6 +3038,23 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "BKShop.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BKShop.Data": "1.0.0",
+          "BKShop.Utilities": "1.0.0",
+          "BKShop.ViewModels": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/BKShop.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BKShop.Application.dll": {}
+        }
+      },
       "BKShop.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3055,6 +3072,34 @@
         },
         "runtime": {
           "bin/placeholder/BKShop.Data.dll": {}
+        }
+      },
+      "BKShop.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/BKShop.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BKShop.Utilities.dll": {}
+        }
+      },
+      "BKShop.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/BKShop.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BKShop.ViewModels.dll": {}
         }
       }
     }
@@ -9261,14 +9306,30 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "BKShop.Application/1.0.0": {
+      "type": "project",
+      "path": "../BKShop.Application/BKShop.Application.csproj",
+      "msbuildProject": "../BKShop.Application/BKShop.Application.csproj"
+    },
     "BKShop.Data/1.0.0": {
       "type": "project",
       "path": "../BKShop.Data/BKShop.Data.csproj",
       "msbuildProject": "../BKShop.Data/BKShop.Data.csproj"
+    },
+    "BKShop.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../BKShop.Utilities/BKShop.Utilities.csproj",
+      "msbuildProject": "../BKShop.Utilities/BKShop.Utilities.csproj"
+    },
+    "BKShop.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../BKShop.ViewModels/BKShop.ViewModels.csproj",
+      "msbuildProject": "../BKShop.ViewModels/BKShop.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BKShop.Application >= 1.0.0",
       "BKShop.Data >= 1.0.0",
       "FluentAssertions >= 6.7.0",
       "Microsoft.AspNetCore.Http >= 2.2.2",
@@ -9305,6 +9366,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\The Rookies\\Assignment-TheRookies\\BKShop\\BKShop.Application\\BKShop.Application.csproj": {
+              "projectPath": "D:\\The Rookies\\Assignment-TheRookies\\BKShop\\BKShop.Application\\BKShop.Application.csproj"
+            },
             "D:\\The Rookies\\Assignment-TheRookies\\BKShop\\BKShop.Data\\BKShop.Data.csproj": {
               "projectPath": "D:\\The Rookies\\Assignment-TheRookies\\BKShop\\BKShop.Data\\BKShop.Data.csproj"
             }
