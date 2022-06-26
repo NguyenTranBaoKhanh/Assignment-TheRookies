@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "BKShop.API/1.0.0": {
         "dependencies": {
+          "BKShop.Application": "1.0.0",
           "BKShop.Data": "1.0.0",
           "FluentAssertions": "6.7.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
@@ -1821,6 +1822,18 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
+      "BKShop.Application/1.0.0": {
+        "dependencies": {
+          "BKShop.Data": "1.0.0",
+          "BKShop.Utilities": "1.0.0",
+          "BKShop.ViewModels": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
+        },
+        "runtime": {
+          "BKShop.Application.dll": {}
+        }
+      },
       "BKShop.Data/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http": "2.2.2",
@@ -1833,6 +1846,24 @@
         },
         "runtime": {
           "BKShop.Data.dll": {}
+        }
+      },
+      "BKShop.Utilities/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
+        },
+        "runtime": {
+          "BKShop.Utilities.dll": {}
+        }
+      },
+      "BKShop.ViewModels/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
+        },
+        "runtime": {
+          "BKShop.ViewModels.dll": {}
         }
       }
     }
@@ -3243,7 +3274,22 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
+    "BKShop.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "BKShop.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BKShop.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BKShop.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

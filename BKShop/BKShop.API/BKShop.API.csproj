@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BKShop.Application\BKShop.Application.csproj" />
     <ProjectReference Include="..\BKShop.Data\BKShop.Data.csproj" />
   </ItemGroup>
 
