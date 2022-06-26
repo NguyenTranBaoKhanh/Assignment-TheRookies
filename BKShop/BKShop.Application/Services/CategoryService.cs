@@ -40,18 +40,23 @@ namespace BKShop.Application.Services
 
         }
 
+        //public Task<int> DeleteAsync(int categoryId)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         public async Task<int> DeleteAsync(int categoryId)
         {
             var category = await _context.Categories.Where(x => x.Id == categoryId).FirstOrDefaultAsync();
-            if(category == null)
+            if (category == null)
             {
                 throw new BKShopException($"Cannot find category with Id = {categoryId}");
             }
-            var productList = await _context.Products.Where(x => x.CategoryId == categoryId).ToListAsync();
-            foreach( var product in productList)
-            {
-                await _productService.DeleteAsync(product.Id);
-            }
+            //var productList = await _context.Products.Where(x => x.CategoryId == categoryId).ToListAsync();
+            //foreach (var product in productList)
+            //{
+            //    await _productService.DeleteAsync(product.Id);
+            //}
             _context.Categories.Remove(category);
             return await _context.SaveChangesAsync();
         }
