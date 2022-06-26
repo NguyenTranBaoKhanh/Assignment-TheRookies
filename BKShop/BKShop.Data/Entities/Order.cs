@@ -17,6 +17,8 @@ namespace BKShop.Data.Entities
         public string Phone { get; set; }
         public DateTime? DeliveryDate { get; set; }
         public DateTime? CreatedDate { get; set; }
+
+
     }
 
 

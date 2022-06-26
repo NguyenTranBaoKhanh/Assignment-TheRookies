@@ -17,3 +17,5 @@ D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.Application\bin\Debug\net6.0\
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.Application\bin\Debug\net6.0\BKShop.Utilities.pdb
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.Application\bin\Debug\net6.0\BKShop.Application.runtimeconfig.json
 D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.Application\obj\Debug\net6.0\BKShop.Application.genruntimeconfig.cache
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.Application\bin\Debug\net6.0\BKShop.ViewModels.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.Application\bin\Debug\net6.0\BKShop.ViewModels.pdb
