@@ -1,0 +1,12 @@
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\bin\Debug\net6.0\BKShop.ViewModels.deps.json
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\bin\Debug\net6.0\BKShop.ViewModels.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\bin\Debug\net6.0\BKShop.ViewModels.pdb
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\BKShop.ViewModels.csproj.AssemblyReference.cache
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\BKShop.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\BKShop.ViewModels.AssemblyInfoInputs.cache
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\BKShop.ViewModels.AssemblyInfo.cs
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\BKShop.ViewModels.csproj.CoreCompileInputs.cache
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\BKShop.ViewModels.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\refint\BKShop.ViewModels.dll
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\BKShop.ViewModels.pdb
+D:\The Rookies\Assignment-TheRookies\BKShop\BKShop.ViewModels\obj\Debug\net6.0\ref\BKShop.ViewModels.dll
