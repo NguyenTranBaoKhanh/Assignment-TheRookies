@@ -45,6 +45,7 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 //Declare DI
 builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddTransient<IBrandService, BrandService>();
 
 
 

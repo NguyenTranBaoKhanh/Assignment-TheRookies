@@ -69,7 +69,6 @@ namespace BKShop.API.Controllers
         [HttpDelete("{Id}")]
         [Authorize]
         [AllowAnonymous]
-
         public async Task<IActionResult> Delete(int Id)
         {
             try

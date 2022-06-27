@@ -54,7 +54,9 @@ namespace BKShop.Application.Services
                 Description = request.Description,
                 Price = request.Price,
                 Stock = request.Stock,
-                Image = request.Image
+                Image = request.Image,
+                CreatedDate = DateTime.Now,
+                UpdatedDate = DateTime.Now,
 
             };
             await _context.Products.AddAsync(product);
@@ -132,11 +134,13 @@ namespace BKShop.Application.Services
             }
             product.Name = request.Name;
             product.BrandId = request.BrandId;
+            product.CategoryId = request.CategoryId;
             product.Description = request.Description;
             product.Color = request.Color;
-            product.CategoryId = request.CategoryId;
             product.Stock = request.Stock;
             product.Capacity = request.Capacity;
+            product.Image = request.Image;
+            product.UpdatedDate = DateTime.Now;
 
             return await _context.SaveChangesAsync();
         }
