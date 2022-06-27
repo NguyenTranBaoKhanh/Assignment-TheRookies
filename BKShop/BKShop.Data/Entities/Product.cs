@@ -23,6 +23,8 @@ namespace BKShop.Data.Entities
 
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate {get; set; }
 
         public List<Review> Reviews { get; set; }
 
