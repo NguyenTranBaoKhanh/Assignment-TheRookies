@@ -1,5 +1,7 @@
-﻿using BKShop.Data.EF;
+﻿using BKShop.Application.Interfaces;
+using BKShop.Data.EF;
 using BKShop.Data.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BKShop.API.Controllers
@@ -9,15 +11,18 @@ namespace BKShop.API.Controllers
     public class ProductController : ControllerBase
     {
         private readonly BKShopDbContext _context;
-        public ProductController(BKShopDbContext context)
+        private readonly IProductService _productService;
+        public ProductController(IProductService productService)
         {
-            _context = context;
+            _productService = productService;
         }
 
         [HttpGet]
-        public IActionResult Get()
+        [AllowAnonymous]
+        public async Task<IActionResult> Get()
         {
-            var products = _context.Products.ToList();
+            //var products = _context.Products.ToList();
+            var products = _productService.GetAllAsync();
             return Ok(products);
         }
 
