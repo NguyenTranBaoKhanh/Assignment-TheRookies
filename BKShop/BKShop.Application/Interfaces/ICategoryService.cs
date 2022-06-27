@@ -14,6 +14,7 @@ namespace BKShop.Application.Interfaces
 
         Task<int> UpdateAsync(CategoryUpdateRequest request);
 
+
         Task<int> DeleteAsync(int categoryId);
 
         Task<List<CategoryViewModel>> GetAllAsync();

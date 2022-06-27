@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using BKShop.Application.Interfaces;
 using BKShop.Application.Services;
 using Microsoft.OpenApi.Models;
+using AutoMapper;
+using BKShop.ViewModels.ViewModels;
+using BKShop.Data.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +39,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "BKShop.Api", Version = "v1" });
 });
+//add automapper
+//builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 //Declare DI
 builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<IProductService, ProductService>();

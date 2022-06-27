@@ -37,7 +37,7 @@ namespace BKShop.API.Controllers
                 var category = await _categoryService.GetByIdAsync(Id);
                 if(category == null)
                 {
-                    return NotFound($"Cannot find a cake with Id: {Id}");
+                    return NotFound($"Cannot find a category with Id: {Id}");
                 }
                 return Ok(category);
             }
@@ -61,7 +61,7 @@ namespace BKShop.API.Controllers
             var data = await _categoryService.GetByIdAsync(categoryId);
             if(data == null)
             {
-                return NotFound($"Cannot find a cake with Id: {categoryId}");
+                return NotFound($"Cannot find a category with Id: {categoryId}");
             }
             return Ok(data);
         }

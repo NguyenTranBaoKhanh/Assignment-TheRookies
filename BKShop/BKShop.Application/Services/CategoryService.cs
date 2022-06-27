@@ -1,4 +1,5 @@
-﻿using BKShop.Application.Interfaces;
+﻿using AutoMapper;
+using BKShop.Application.Interfaces;
 using BKShop.Data.EF;
 using BKShop.Data.Entities;
 using BKShop.Utilities.Exceptions;
@@ -17,13 +18,16 @@ namespace BKShop.Application.Services
     {
         private readonly BKShopDbContext _context;
         private readonly IProductService _productService;
+        private readonly IMapper _mapper;
 
-        public CategoryService(BKShopDbContext context, IProductService productService)
+
+        public CategoryService(BKShopDbContext context, IProductService productService, IMapper mapper)
         {
             _context = context;
             _productService = productService;
-        }
+            _mapper = mapper;
 
+        }
         public async Task<int> CreateAsync(CategoryCreateRequest request)
         {
             if (string.IsNullOrEmpty(request.Name))
@@ -87,12 +91,14 @@ namespace BKShop.Application.Services
         public async Task<int> UpdateAsync(CategoryUpdateRequest request)
         {
             var category = await _context.Categories.FindAsync(request.Id);
-            if(category == null)
+            if (category == null)
             {
                 throw new BKShopException($"Cannot find category with Id = {request.Id}");
             }
             category.Name = request.Name;
             return await _context.SaveChangesAsync();
         }
+
+
     }
 }

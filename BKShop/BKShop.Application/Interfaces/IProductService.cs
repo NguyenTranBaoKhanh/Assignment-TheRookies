@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BKShop.Application.Catalog.Products.Dtos;
 using BKShop.ViewModels.Common;
 using BKShop.ViewModels.Requests.Product;
 using BKShop.ViewModels.ViewModels;
@@ -25,9 +24,8 @@ namespace BKShop.Application.Interfaces
 
         Task<List<ProductViewModel>> GetLatestProduct();
 
-        Task<int> AddComment(int idproduct, string comment, Guid user);
+        Task<int> AddComment(int productId, string comment, Guid user);
 
-        Task<List<ProductViewModel>> GetBackToSchool();
-        Task<List<ProductViewModel>> GetBestChoice();
+        
     }
 }
