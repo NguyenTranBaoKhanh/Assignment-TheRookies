@@ -11,7 +11,7 @@ namespace BKShop.Data.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
-        public decimal Price { get; set; }
+        public int Price { get; set; }
         public string Capacity { get; set; }
         public int Stock { get; set; }
         public string Description { get; set; }

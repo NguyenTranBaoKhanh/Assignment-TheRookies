@@ -14,7 +14,7 @@ namespace BKShop.Data.Configurations
         public void Configure(EntityTypeBuilder<Product> builder)
         {
             builder.Property(x => x.Name).IsRequired();
-            builder.Property(x => x.Price).HasColumnType("decimal(10, 2)");
+            builder.Property(x => x.Price);
 
         }
     }
