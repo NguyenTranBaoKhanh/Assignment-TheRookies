@@ -30,7 +30,7 @@ namespace BKShop.ViewModels.Requests.Product
         [Range(1, 99, ErrorMessage = "Stock from {1} to {2}")]
         public int Stock { get; set; }
 
-        public string Image { get; set; }
+        public IFormFile Image { get; set; }
     }
 
 }
