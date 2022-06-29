@@ -1,0 +1,57 @@
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.cart-amount {
+    /* display: inline-block;
+    margin: 0 5px; */
+    max-width: 50px;
+}
+
+tr td i {
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+}
+
+tr td i:hover {
+    font-size: 2.5rem;
+}
+
+.total-title {
+    font-size: 2rem;
+    margin-right: 0;
+    color: #ff0e24;
+}
+
+.total-price {
+    font-weight: 600;
+    font-size: 2rem;
+    max-width: 120px;
+}
+
+.total-pay {
+    font-size: 2rem;
+    min-width: 150px;
+}
+
+.frm {
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 0 30px;
+}
+
+.form-left {
+    flex: 2;
+    margin-right: 50px;
+}
+
+.form-right {
+    flex: 1;
+}

@@ -1,0 +1,471 @@
+:root {
+    --primary-color: #15b946;
+    --primary-background: linear-gradient(180deg, #15b946, #86f0a6);
+    --title-color: #333333;
+    --content-color: #848484;
+    --background-color: #edf2f4;
+    --text-color: #212529;
+}
+
+* {
+    box-sizing: inherit;
+    list-style-type: none;
+    /* transition: all 0.1s !important; */
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: rgb(255, 255, 255);
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: #212529;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #212529;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.bodymin {
+    min-height: 300px;
+}
+
+.modal1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.modal1_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal1_body {
+    /* width: 200px;
+    height: 200px;
+    background-color: #333; */
+    margin: auto;
+    z-index: 10;
+}
+
+
+/* .container {
+  max-width: 1170px;
+  margin: 0 auto;
+} */
+
+
+/* .container-fluid {
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+} */
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.background__sub {
+    /* width: 100%; */
+    background-color: #f3f3f3;
+}
+
+.background-white {
+    /* background-color: #fff; */
+}
+
+.title {
+    color: #212529;
+    font-weight: 700;
+    font-size: 2.6rem;
+    /* margin: 5px 0 0 0; */
+    padding: 5px 0;
+    position: relative;
+    text-align: center;
+    background-image: linear-gradient(180deg, #15b946, #86f0a6);
+}
+
+
+/* .title::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  left: 36.49%;
+  right: 35.41%;
+  top: 230%;
+  bottom: 0%;
+  background: #848484;
+  border-radius: 44px;
+} */
+
+.btn {
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+
+/* .btn--primary {
+    border: 3px solid transparent;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-bottom: 10px;
+} */
+
+
+/* .btn--primary:hover {
+  background-color: #f5394f;
+} */
+
+
+/* .btn--primary:active {
+  box-shadow: 0px 0px 0px 6px #f5394f;
+  transition: all 0.2s;
+} */
+
+
+/* .btn--secondary {
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  margin-bottom: 10px;
+} */
+
+
+/* .btn--secondary:hover {
+  background-color: #f5394f;
+  color: #fff;
+} */
+
+
+/* .btn--secondary:active {
+  box-shadow: 0px 0px 0px 6px #f5394f;
+  transition: all 0.2s;
+} */
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.slider {
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300%;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+.pointer__default {
+    cursor: default;
+}
+
+
+/* toast */
+
+#toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /* margin-left: -125px; */
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+#toast #img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    background-color: #111;
+    /* color: #fff; */
+}
+
+#toast #desc {
+    /* color: #fff; */
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes expand {
+    from {
+        min-width: 50px;
+    }
+    to {
+        min-width: 350px;
+    }
+}
+
+@keyframes expand {
+    from {
+        min-width: 50px;
+    }
+    to {
+        min-width: 350px;
+    }
+}
+
+@-webkit-keyframes stay {
+    from {
+        min-width: 350px;
+    }
+    to {
+        min-width: 350px;
+    }
+}
+
+@keyframes stay {
+    from {
+        min-width: 350px;
+    }
+    to {
+        min-width: 350px;
+    }
+}
+
+@-webkit-keyframes shrink {
+    from {
+        min-width: 350px;
+    }
+    to {
+        min-width: 50px;
+    }
+}
+
+@keyframes shrink {
+    from {
+        min-width: 350px;
+    }
+    to {
+        min-width: 50px;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 60px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 60px;
+        opacity: 0;
+    }
+}
+
+
+/* toast */
+
+
+/* @media only screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    margin: 40px 0;
+  }
+  .title::after {
+    top: 150%;
+  }
+} */
+
+
+/* CSS on load page  */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 232, 241);
+    z-index: 9999;
+}
+
+.loader.hidden {
+    animation: fadeOut 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* You can remove these code below*/
+
+:root {
+    --primary: #08aeea;
+    --secondary: #13D2B8;
+    --purple: #bd93f9;
+    --pink: #ff6bcb;
+    --blue: #8be9fd;
+    --gray: #333;
+    --font: "Poppins", sans-serif;
+    --gradient: linear-gradient(40deg, #ff6ec4, #7873f5);
+    --shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* input,
+button,
+textarea {
+    border: 0;
+    outline: none;
+} */
+
+
+/* Main code */
+
+.circle-loading {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 15rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+.circle-loading:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: 0.5rem solid white;
+    border-right-color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    animation: circleLoading 1s forwards infinite linear;
+}
+
+@keyframes circleLoading {
+    to {
+        transform: rotate(360deg);
+    }
+}

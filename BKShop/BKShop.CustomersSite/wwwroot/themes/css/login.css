@@ -1,0 +1,174 @@
+.area-form {
+    width: 450px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 0 30px;
+}
+
+
+/* .area-form input:active {
+    outline: none;
+    border: none;
+}
+
+.area-form input:focus {
+    border: none;
+    outline: none;
+} */
+
+.name-form {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-login {
+    width: 100%;
+    height: 65px;
+    background: var(--primary-background);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: rgb(243, 242, 242);
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    background: #f0f2f5;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+    /* color: rgba(62, 62, 62, .6); */
+    color: rgb(62, 62, 62);
+}
+
+.form-input:focus {
+    border: solid 1px var(--primary-color);
+    outline: var(--primary-color);
+}
+
+.form-message {
+    color: #f33a58;
+    font-size: 1.2rem;
+}
+
+.login-sub {
+    margin-bottom: 15px;
+}
+
+.login-sub span a {
+    color: var(--primary-color);
+}
+
+.invalid .form-input {
+    border: solid 1px #f33a58;
+}
+
+
+/* login binary */
+
+* {
+    box-sizing: border-box;
+}
+
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    /* max-width: 280px; */
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.inp .label {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.inp .focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.inp input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: #000;
+    transition: all 0.15s ease;
+}
+
+.inp input:hover {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.inp input:not(:-moz-placeholder-shown)+.label {
+    color: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:not(:-ms-input-placeholder)+.label {
+    color: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:not(:placeholder-shown)+.label {
+    color: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+    /* box-shadow: inset 0 -2px 0 #0077FF; */
+    box-shadow: inset 0 -2px 0 var(--primary-color);
+}
+
+.inp input:focus+.label {
+    /* color: #0077FF; */
+    color: var(--primary-color);
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus+.label+.focus-bg {
+    transform: scaleX(1);
+    transition: all 0.1s ease;
+}

@@ -1,0 +1,362 @@
+.current-position {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 15px 0 10px 115px;
+}
+
+.current-position a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.current-position i {
+    font-size: 1rem;
+    margin-right: 5px;
+    transform: translateY(-15%);
+}
+
+.product__name {
+    margin: 5px 115px 0 115px;
+}
+
+.product__name .name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.product__rating {}
+
+.point {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .point-left {
+    font-size: 32px;
+    left: 0px;
+  }
+  .point-right {
+    opacity: 0.7;
+    right: 0px;
+  }
+
+.productDetails {
+    margin: 5px 115px 20px 115px;
+}
+
+.productDetail-left {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.productDetail-center {
+    flex: 2;
+}
+
+.productDetail-right {
+    flex: 1;
+}
+
+.productDetails__img {
+    width: 300px;
+    margin-top: 15px;
+    height: 300px;
+}
+
+.productDetails_price {
+    border-bottom: 1px solid #aaabac;
+}
+
+.productDetails_price-current {
+    font-size: 2.2rem;
+    color: #d0021c;
+    font-weight: 700;
+}
+
+.productDetails_price-old {
+    font-size: 2rem;
+    color: #aaabac;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.options {
+    margin-top: 10px;
+}
+
+.options .active {
+    border: solid 1px red;
+    border-radius: 10px;
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.active::before {
+    content: "";
+    width: 15px;
+    height: 10px;
+    border-radius: 0 0 0.5rem 0;
+    background: #D70018;
+    background-image: url(http://localhost:81/BKShop/public/icon/check-solid.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.option {
+    border: solid 1px #d2d6dc;
+    border-radius: 10px;
+    max-width: 150px;
+    text-align: center;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.storage {
+    font-weight: bold;
+}
+
+.color {
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.btn-addtocart {
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.productDetail-right {
+    margin-left: 10px;
+}
+
+.bonus {
+    border: solid 1px #d1f7cb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bonus-title {
+    text-align: center;
+    height: 30px;
+    background-color: #d5fad2;
+    color: var(--primary-color)
+}
+
+.bonus-content {
+    padding: 10px;
+}
+
+.bonus-content i {
+    color: var(--primary-color);
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.description {}
+
+.description-title {
+    font-size: 3rem;
+    font-weight: 600;
+    border-top: solid 5px coral;
+    border-bottom: solid 5px coral;
+}
+
+.description-content {}
+
+/* comment */
+
+.cmt-top {
+    display: flex;
+    /* justify-content: space-around; */
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  .cmt-top-left {
+    flex: 1;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    /* align-items: center;
+    justify-content:center; */
+  }
+  .cmt-top-right {
+    flex: 1;
+    display: flex;
+    font-size: 24px;
+    margin-left: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border-left: 1px solid; */
+  }
+  
+  .cmt-top-right--separate::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 120px;
+    background-color: var(--primary-color);
+    /* right: -8px; */
+    left: 55%;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+  }
+  
+  .cmt-input {
+    outline: none;
+    border: none;
+    background-color: rgb(218, 218, 218);
+    padding-left: 5px;
+    /* color: #868383; */
+    height: 50px;
+    width: 550px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    margin-top: 20px;
+  }
+  
+  .cmt-input:focus {
+    border: 3px solid #45f345b6;
+    background-color: #fff;
+    /* box-shadow: 5px 5px 10px #166905b6; */
+  }
+  
+  .cmt-button {
+    width: 20%;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+  }
+  
+  .cmt-content{
+      font-size: 1.4rem;
+      /* font-weight: bold; */
+      margin-top: 10px;
+      line-height: 2rem;
+      height: 4rem;
+      max-width: 900px;
+      overflow: hidden;
+      display: block;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+  }
+
+
+
+
+  .card {
+    border: none;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    border-radius: 4px;
+  }
+  
+  .dots {
+    height: 4px;
+    width: 4px;
+    margin-bottom: 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .badge {
+    padding: 7px;
+    padding-right: 9px;
+    padding-left: 16px;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+  }
+  
+  .user-img {
+    margin-top: 4px;
+  }
+  
+  .check-icon {
+    font-size: 17px;
+    color: #c3bfbf;
+    top: 1px;
+    position: relative;
+    margin-left: 3px;
+  }
+  
+  .form-check-input {
+    margin-top: 6px;
+    margin-left: -24px !important;
+    cursor: pointer;
+  }
+  
+  .form-check-input:focus {
+    box-shadow: none;
+  }
+  
+  .icons i {
+    margin-left: 8px;
+  }
+  
+  .reply {
+    margin-left: 12px;
+  }
+  
+  .reply small {
+    color: #b7b4b4;
+  }
+  
+  .reply small:hover {
+    color: green;
+    cursor: pointer;
+  }
+
+/* comment */
+
+
+.star-widget input{
+  display: none;
+}
+
+.star-widget label{
+  font-size: 30px;
+  color: #444;
+  float: right;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+/* .star-widget input:not(:checked) ~ label:hover{
+  color: #fd4;
+} */
+
+input:not(:checked) ~ label:hover,input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+
+}
+input:checked ~ label{
+  color: #fd4;
+}
+
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 15px rgb(205, 128, 69);
+}

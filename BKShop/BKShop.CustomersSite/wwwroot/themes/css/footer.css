@@ -1,0 +1,56 @@
+.footer__top {
+    background-color: var(--background-color);
+    border-top: solid 1px var(--primary-color);
+}
+
+.footer__logo {
+    width: 180px;
+    height: 150px;
+}
+
+.footer__list {
+    margin-left: 50px;
+}
+
+.footer__list div {
+    margin-left: 50px;
+}
+
+.footer__list li input {
+    height: 30px;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.footer__list li button {
+    margin: 0;
+}
+
+.footer__list h6 {
+    /* font-family: var(--poppins-font); */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    margin-bottom: 5px;
+}
+
+.footer__list_social--icon a {
+    margin-right: 10px;
+}
+
+.footer__copyright {
+    background-color: #e1e6e7;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.footer__copyright p {
+    font-family: var(--poppins-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    color: var(--content-color);
+}
