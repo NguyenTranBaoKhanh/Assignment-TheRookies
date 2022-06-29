@@ -1,9 +1,9 @@
 ﻿using BKShop.Application.Catalog.Products.Dtos;
 using BKShop.Application.Catalog.Products.Dtos.Manage;
-using BKShop.Application.Dtos;
 using BKShop.Data.EF;
 using BKShop.Data.Entities;
 using BKShop.Utilities.Exceptions;
+using BKShop.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +56,7 @@ namespace BKShop.Application.Catalog.Products
         //    throw new NotImplementedException();
         //}
 
-        public async Task<PageResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
+        public async Task<PagedResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
         {
             //var query = _context.Products.Where(p=>p.Name)
             if (!string.IsNullOrEmpty(request.Keyword))
@@ -77,6 +77,11 @@ namespace BKShop.Application.Catalog.Products
         }
 
         public Task<bool> UpdateStock(int productId, int newQuantity)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<PagedResult<ProductViewModel>> IManageProductService.GetAllPaging(GetProductPagingRequest request)
         {
             throw new NotImplementedException();
         }

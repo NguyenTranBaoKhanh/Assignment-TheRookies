@@ -1,4 +1,4 @@
-﻿using BKShop.Application.Dtos;
+﻿using BKShop.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;

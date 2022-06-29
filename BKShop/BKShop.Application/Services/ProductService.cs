@@ -7,10 +7,12 @@ using BKShop.ViewModels.Common;
 using BKShop.ViewModels.Requests.Product;
 using BKShop.ViewModels.ViewModels;
 using DocumentFormat.OpenXml.Presentation;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,10 +22,12 @@ namespace BKShop.Application.Services
     {
         private readonly BKShopDbContext _context;
         private readonly IMapper _mapper;
-        public ProductService(BKShopDbContext context, IMapper mapper)
+        //private readonly IStorageService _storageService;
+        public ProductService(BKShopDbContext context, IMapper mapper/*, IStorageService storageService*/)
         {
             _context = context;
             _mapper = mapper;
+            //_storageService = storageService;
         }
 
         public async Task<int> AddComment(int productId, string comment, Guid user)
@@ -59,6 +63,7 @@ namespace BKShop.Application.Services
                 UpdatedDate = DateTime.Now,
 
             };
+            //Save Image
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
             return product.Id;
@@ -94,9 +99,31 @@ namespace BKShop.Application.Services
 
         }
 
-        public Task<PagedResult<ProductViewModel>> GetAllPagingAsync(GetProductPagingRequest request)
+        public async Task<PagedResult<ProductViewModel>> GetAllPagingAsync(GetProductPagingRequest request)
         {
-            throw new NotImplementedException();
+            var result = await _context.Products.Select(product => _mapper.Map<ProductViewModel>(product)).ToListAsync();
+            if (!string.IsNullOrEmpty(request.Keyword))
+            {
+                result = result.Where(x => x.Name.Contains(request.Keyword)).ToList();
+            }
+            if(request.CategoryIds?.Count > 0)
+            {
+                result = result.Where(p => request.CategoryIds.Contains(p.CategoryId)).ToList();
+            }
+            int totalRow = result.Count();
+            request.PageSize = request.PageSize > 0 ? request.PageSize : 999;
+            request.PageIndex = request.PageIndex > 0 ? request.PageIndex : 1;
+            var data = result.Skip((request.PageIndex - 1) * request.PageSize).Take(request.PageSize).ToList();
+            var pageResult = new PagedResult<ProductViewModel>()
+            {
+                TotalRecords = totalRow,
+                PageSize = request.PageSize,
+                PageIndex = request.PageIndex,
+                Items = data,
+            };
+            return pageResult;
+
+
         }
 
         public async Task<ProductViewModel> GetByIdAsync(int productId)
@@ -145,7 +172,15 @@ namespace BKShop.Application.Services
             return await _context.SaveChangesAsync();
         }
 
-        
+        //private async Task<string> SaveFile(IFormFile file)
+        //{
+        //    var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+        //    var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
+        //    await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
+        //    return fileName;
+        //}
+
+
 
 
     }

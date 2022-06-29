@@ -1,6 +1,7 @@
 ﻿using BKShop.Application.Catalog.Products.Dtos;
 using BKShop.Application.Catalog.Products.Dtos.Manage;
-using BKShop.Application.Dtos;
+using BKShop.ViewModels.Common;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace BKShop.Application.Catalog.Products
         Task<bool> UpdatePrice(int productId, decimal newPrice);
         Task<bool> UpdateStock(int productId, int newQuantity);
         Task<List<ProductViewModel>> GetAll();
-        Task<PageResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
+        Task<PagedResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
 
     }
 }

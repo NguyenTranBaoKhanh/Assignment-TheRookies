@@ -111,5 +111,20 @@ namespace BKShop.API.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+        [HttpGet("Paging")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetProductPagingRequest request)
+        {
+            try
+            {
+                var data = await _productService.GetAllPagingAsync(request);
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
     }
 }

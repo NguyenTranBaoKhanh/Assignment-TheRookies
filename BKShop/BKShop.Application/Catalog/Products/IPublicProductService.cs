@@ -1,6 +1,6 @@
 ﻿using BKShop.Application.Catalog.Products.Dtos;
 using BKShop.Application.Catalog.Products.Dtos.Manage;
-using BKShop.Application.Dtos;
+using BKShop.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace BKShop.Application.Catalog.Products
 {
     public interface IPublicProductService
     {
-        PageResult<ProductViewModel> GetAllByCategoryId(GetProductPagingRequest request);
+        PagedResult<ProductViewModel> GetAllByCategoryId(GetProductPagingRequest request);
 
     }
 }

@@ -9,7 +9,7 @@ namespace BKShop.Application.Catalog.Products.Dtos.Manage
     public class ProductCreateRequest
     {
         public string Name { get; set; }
-        public decimal Price { get; set; }
+        public int Price { get; set; }
         public string Color { get; set; }
         public string Capacity { get; set; }
         public int Stock { get; set; }

@@ -8,6 +8,9 @@ using Microsoft.OpenApi.Models;
 using AutoMapper;
 using BKShop.ViewModels.ViewModels;
 using BKShop.Data.Entities;
+using BKShop.Application.System.Users;
+using Microsoft.VisualStudio.Settings;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,6 +49,13 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IBrandService, BrandService>();
+//builder.Services.AddTransient<IStorageService, StorageService>();
+
+// DI for identity
+//builder.Services.AddTransient<IUserService, UserService>();
+//builder.Services.AddTransient<UserManager<User>, UserManager<User>>();
+//builder.Services.AddTransient<SignInManager<User>, SignInManager<User>>();
+//builder.Services.AddTransient<RoleManager<Role>, RoleManager<Role>>();
 
 
 
