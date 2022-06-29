@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BKShop.Data.Migrations
 {
     [DbContext(typeof(BKShopDbContext))]
-    [Migration("20220622180305_V1")]
-    partial class V1
+    [Migration("20220629181829_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,41 +49,36 @@ namespace BKShop.Data.Migrations
                         new
                         {
                             Id = 2,
-                            Name = "Apple"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Oppo"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Oneplus"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Nokia"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Realme"
-                        },
-                        new
-                        {
-                            Id = 7,
                             Name = "Xiaomi"
                         },
                         new
                         {
-                            Id = 8,
+                            Id = 3,
+                            Name = "Realme"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Oppo"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Apple"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "OnePlus"
+                        },
+                        new
+                        {
+                            Id = 7,
                             Name = "Vivo"
                         },
                         new
                         {
-                            Id = 9,
+                            Id = 8,
                             Name = "Khác"
                         });
                 });
@@ -133,17 +128,17 @@ namespace BKShop.Data.Migrations
                         new
                         {
                             Id = 2,
-                            Name = "Máy tính bảng"
-                        },
-                        new
-                        {
-                            Id = 3,
                             Name = "LapTop"
                         },
                         new
                         {
-                            Id = 4,
+                            Id = 3,
                             Name = "Đồng hồ"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Máy tính bảng"
                         },
                         new
                         {
@@ -375,6 +370,9 @@ namespace BKShop.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -387,11 +385,14 @@ namespace BKShop.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(10,2)");
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -409,11 +410,13 @@ namespace BKShop.Data.Migrations
                             Capacity = "8/128",
                             CategoryId = 1,
                             Color = "Xanh",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5749),
                             Description = "Hệ thống camera sau được trang bị tối tân, trong đó có camera chính 64 MP, camera góc siêu rộng 8 MP và camera macro 2 MP cùng camera trước 32 MP luôn sẵn sàng bắt trọn mọi cảm xúc trong khung hình, giúp người dùng thoải mái ghi lại những khoảnh khắc trong cuộc sống một cách ấn tượng nhất.",
-                            Image = "",
+                            Image = "oppo-reno6-z-5g-aurora.jpg",
                             Name = "Oppo Reno 6Z 5G xanh",
-                            Price = 1m,
-                            Stock = 10
+                            Price = 1000000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5767)
                         },
                         new
                         {
@@ -422,11 +425,13 @@ namespace BKShop.Data.Migrations
                             Capacity = "4/64",
                             CategoryId = 1,
                             Color = "Đen",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5771),
                             Description = "Apple đã trang bị con chip mới nhất của hãng (tính đến 11/2020) cho iPhone 12 đó là A14 Bionic, được sản xuất trên tiến trình 5 nm với hiệu suất ổn định hơn so với chip A13 được trang bị trên phiên bản tiền nhiệm iPhone 11.",
-                            Image = "",
+                            Image = "iphone-12-mini-den.jpg",
                             Name = "Iphone 12 4/64 đen",
-                            Price = 1m,
-                            Stock = 10
+                            Price = 1000000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5772)
                         },
                         new
                         {
@@ -435,11 +440,163 @@ namespace BKShop.Data.Migrations
                             Capacity = "4/64",
                             CategoryId = 2,
                             Color = "Xanh",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5776),
                             Description = "Samsung chính thức trình làng mẫu máy tính bảng có tên Galaxy Tab S7 FE, máy trang bị cấu hình mạnh mẽ, màn hình giải trí siêu lớn và điểm ấn tượng nhất là viên pin siêu khủng được tích hợp bên trong, giúp tăng hiệu suất làm việc nhưng vẫn có tính di động cực cao. Galaxy Tab S7 FE sẽ khiến bạn choáng ngợp với dụng lượng pin cực khủng 10090 mAh đảm bảo cho cường độ làm việc, giải trí liên tục trong nhiều giờ liền.",
-                            Image = "",
+                            Image = "samsung-galaxy-tab-s7-fe-green.jpg",
                             Name = "Samsung Galaxy Tab S7 FE xanh",
-                            Price = 1m,
-                            Stock = 10
+                            Price = 10000000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5777)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BrandId = 1,
+                            Capacity = "4/64",
+                            CategoryId = 1,
+                            Color = "xanh",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5780),
+                            Description = "Xiaomi duy trì sự trẻ trung trong thiết kế của mình từ Redmi 9A, Redmi 9C và đến hiện tại là Redmi 9T, chiếc điện thoại mang đến tùy chọn màu nổi bật, rất phù hợp với cá tính năng động của giới trẻ.",
+                            Image = "xiaomi-redmi-9t-xanh.jpg",
+                            Name = "Xiaomi Redmi 9T",
+                            Price = 4950000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5781)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            BrandId = 1,
+                            Capacity = "8/256",
+                            CategoryId = 1,
+                            Color = "xanh",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5785),
+                            Description = "Xiaomi Mi 11 một siêu phẩm đến từ Xiaomi, máy cho trải nghiệm hiệu năng hàng đầu với vi xử lý Qualcomm Snapdragon 888, cùng loạt công nghệ đỉnh cao, khiến bất kỳ ai cũng sẽ choáng ngợp về smartphone này. Có thể thấy, điểm sáng trong thiết kế của Mi 11 đến từ cụm 3 camera mặt sau được đặt trong mô-đun hình vuông, được phân tầng với 2 lớp kính tạo nên sự khác biệt và nổi bật ngay từ cái nhìn đầu tiên.",
+                            Image = "xiaomi-mi-11-xanhduong.jpg",
+                            Name = "Xiaomi Mi 11 5G xanh",
+                            Price = 16990000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5786)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            BrandId = 5,
+                            Capacity = "4/64",
+                            CategoryId = 1,
+                            Color = "xanh",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5790),
+                            Description = "Apple đã trang bị con chip mới nhất của hãng (tính đến 11/2020) cho iPhone 12 đó là A14 Bionic, được sản xuất trên tiến trình 5 nm với hiệu suất ổn định hơn so với chip A13 được trang bị trên phiên bản tiền nhiệm iPhone 11.",
+                            Image = "iphone-12-violet.jpg",
+                            Name = "Iphone 12 4/64 tím",
+                            Price = 20490000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5791)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BrandId = 5,
+                            Capacity = "4/64",
+                            CategoryId = 1,
+                            Color = "xanh",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5794),
+                            Description = "Apple đã trang bị con chip mới nhất của hãng (tính đến 11/2020) cho iPhone 12 đó là A14 Bionic, được sản xuất trên tiến trình 5 nm với hiệu suất ổn định hơn so với chip A13 được trang bị trên phiên bản tiền nhiệm iPhone 11.",
+                            Image = "iphone-12-xanh-duong.jpg",
+                            Name = "Iphone 12 4/64 xanh dương",
+                            Price = 20490000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5796)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            BrandId = 5,
+                            Capacity = "6/128",
+                            CategoryId = 1,
+                            Color = "xanh",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5799),
+                            Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
+                            Image = "iphone-12-pro-max-xanh-duong.jpg",
+                            Name = "iphone 12 pro max 6/128 xanh dương",
+                            Price = 30000000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5800)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            BrandId = 5,
+                            Capacity = "6/128",
+                            CategoryId = 1,
+                            Color = "đen",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5803),
+                            Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
+                            Image = "iphone-12-pro-max-den.jpg",
+                            Name = "iphone 12 pro max 6/128 đen",
+                            Price = 30000000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5804)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BrandId = 5,
+                            Capacity = "6/128",
+                            CategoryId = 1,
+                            Color = "bạc",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5808),
+                            Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
+                            Image = "iphone-12-pro-bac.jpg",
+                            Name = "iphone 12 pro max 6/128 bạc",
+                            Price = 30000000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5809)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            BrandId = 5,
+                            Capacity = "6/128",
+                            CategoryId = 1,
+                            Color = "vàng",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5812),
+                            Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
+                            Image = "iphone-12-pro-max-vang.jpg",
+                            Name = "iphone 12 pro max 6/128 vàng",
+                            Price = 30000000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5814)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            BrandId = 5,
+                            Capacity = "6/256",
+                            CategoryId = 1,
+                            Color = "đen",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5817),
+                            Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
+                            Image = "iphone-12-pro-max-den.jpg",
+                            Name = "iphone 12 pro max 6/256 đen",
+                            Price = 32500000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5818)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            BrandId = 5,
+                            Capacity = "6/256",
+                            CategoryId = 1,
+                            Color = "bạc",
+                            CreatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5822),
+                            Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
+                            Image = "iphone-12-pro-bac.jpg",
+                            Name = "iphone 12 pro max 6/256 bạc",
+                            Price = 32500000,
+                            Stock = 10,
+                            UpdatedDate = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5823)
                         });
                 });
 
@@ -486,7 +643,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 1,
                             Comment = "Máy đẹp",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4582),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5911),
                             ProductId = 1,
                             Star = 5,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -495,7 +652,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 2,
                             Comment = "Tuyệt lắm",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4593),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5917),
                             ProductId = 1,
                             Star = 4,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -504,7 +661,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 3,
                             Comment = "Máy hơi yếu",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4594),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5920),
                             ProductId = 2,
                             Star = 2,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -513,7 +670,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 4,
                             Comment = "Máy còn yếu lắm",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4596),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5924),
                             ProductId = 2,
                             Star = 3,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -522,7 +679,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 5,
                             Comment = "Ngon đó",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4598),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5928),
                             ProductId = 2,
                             Star = 4,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -531,7 +688,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 6,
                             Comment = "Good",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4599),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5932),
                             ProductId = 3,
                             Star = 5,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -540,7 +697,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 7,
                             Comment = "Yeah",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4601),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5936),
                             ProductId = 3,
                             Star = 4,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -549,7 +706,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 8,
                             Comment = "Đây là comment",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4602),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5939),
                             ProductId = 3,
                             Star = 4,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -558,7 +715,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 9,
                             Comment = "Màu sắc đẹp",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4656),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5943),
                             ProductId = 2,
                             Star = 5,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -567,7 +724,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 10,
                             Comment = "Máy mạnh",
-                            DateCreated = new DateTime(2022, 6, 23, 1, 3, 5, 276, DateTimeKind.Local).AddTicks(4658),
+                            DateCreated = new DateTime(2022, 6, 30, 1, 18, 28, 546, DateTimeKind.Local).AddTicks(5947),
                             ProductId = 1,
                             Star = 5,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -600,7 +757,7 @@ namespace BKShop.Data.Migrations
                         new
                         {
                             Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "5a40f906-40db-45a4-86e6-cf749538712b",
+                            ConcurrencyStamp = "e442f8ba-6b05-4182-99f5-ff2cfd3aed3b",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -608,7 +765,7 @@ namespace BKShop.Data.Migrations
                         new
                         {
                             Id = new Guid("54ba416f-6b89-4c53-873d-4fbd48506e6d"),
-                            ConcurrencyStamp = "14607d96-10c1-4993-a92c-718231d68793",
+                            ConcurrencyStamp = "eb3df65b-cb4e-4246-8108-f683c577ba07",
                             Description = "Customer role",
                             Name = "customer",
                             NormalizedName = "customer"
@@ -685,14 +842,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "c91a7bf7-b40a-4ded-bd6b-d45f122c39e0",
+                            ConcurrencyStamp = "eb9ab6c2-f336-43da-bec9-e0ab1ab58aff",
                             Email = "khanh@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Bao Khanh",
                             NormalizedEmail = "khanh@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPq603p3FnDN6qm28ni6iDM1DhGGd4TNlLLkLX1QBXz5L+rUzf3P7wOaKRT30JqE/Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECIIxo64j5eyeqLR6fO7ZW2xtI10X37ysGtXjMr8lbjHCq2go4ws0kSNHNAXkIOe6w==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -704,14 +861,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("bff91064-dc92-421e-a233-d1080f630928"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "521cd808-2c64-44b4-bb6b-aea851363348",
+                            ConcurrencyStamp = "548d4571-739f-40ef-94d5-1975d76a3d1b",
                             Email = "customer1@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Bao Khanh Customer",
                             NormalizedEmail = "customer1@gmail.com",
                             NormalizedUserName = "customer",
-                            PasswordHash = "AQAAAAEAACcQAAAAEInX3MvKa/rU8SgsugsR2U4FM3qbvtgGBAl8VPAKBnzWfKImdqSXyusYgCwCj19Now==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDz8/7eJI+E6QJIoX6NMQNZYBvuxVxdNwG1kXpa7ygVMcDlXlODmR8yR9Z0r/CtYlA==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -723,14 +880,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("bff91054-dc92-421e-a233-d1080f630928"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "ad167f4f-958f-48f3-b698-edaaa95c4ef0",
+                            ConcurrencyStamp = "52557ce0-3d1d-4acb-9cf4-32152eaeaa6c",
                             Email = "customer2@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "David",
                             NormalizedEmail = "customer2@gmail.com",
                             NormalizedUserName = "customer",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIrGawJsO3eesvzhxRujRwC+nkPf9d99hkkR4tOqbEK+sSPhpGg1PYa4AM7+hGGJnA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPDM4aQ2NmGEt9K99FpHEqTsH/A4iNHWUKJVmi7N977QBzbYpxvJhnHwI6z2oLCrmQ==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -862,7 +1019,7 @@ namespace BKShop.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("BKShop.Data.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Carts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -875,7 +1032,7 @@ namespace BKShop.Data.Migrations
             modelBuilder.Entity("BKShop.Data.Entities.Order", b =>
                 {
                     b.HasOne("BKShop.Data.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -911,7 +1068,7 @@ namespace BKShop.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("BKShop.Data.Entities.Category", "Category")
-                        .WithMany()
+                        .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -940,9 +1097,21 @@ namespace BKShop.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("BKShop.Data.Entities.Category", b =>
+                {
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("BKShop.Data.Entities.Product", b =>
                 {
                     b.Navigation("Reviews");
+                });
+
+            modelBuilder.Entity("BKShop.Data.Entities.User", b =>
+                {
+                    b.Navigation("Carts");
+
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }
