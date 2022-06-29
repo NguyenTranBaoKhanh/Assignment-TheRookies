@@ -23,14 +23,14 @@ namespace BKShop.ViewModels.Requests.Product
         [Required]
         public string Capacity { get; set; }
         [Required]
-        public decimal Price { get; set; }
+        public int Price { get; set; }
         public string Description { get; set; }
         [DataType(DataType.Currency)]
         [Required]
         [Range(1, 99, ErrorMessage = "Stock from {1} to {2}")]
         public int Stock { get; set; }
 
-        public IFormFile Image { get; set; }
+        public string Image { get; set; }
     }
 
 }
