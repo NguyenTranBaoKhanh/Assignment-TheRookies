@@ -18,6 +18,8 @@ namespace BKShop.Application.Interfaces
         Task<int> DeleteAsync(int ProductId);
         Task<List<ProductViewModel>> GetAllAsync();
 
+        Task<List<ProductViewModel>> GetTop5Async();
+
         Task<ProductViewModel> GetByIdAsync(int productId);
 
         Task<PagedResult<ProductViewModel>> GetAllPagingAsync(GetProductPagingRequest request);

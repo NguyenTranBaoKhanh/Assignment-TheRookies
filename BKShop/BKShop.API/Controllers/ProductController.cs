@@ -29,6 +29,15 @@ namespace BKShop.API.Controllers
             return Ok(products);
         }
 
+        [HttpGet("Top5")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetTop5()
+        {
+            //var products = _context.Products.ToList();
+            var products = await _productService.GetTop5Async();
+            return Ok(products);
+        }
+
         [HttpGet("{Id}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetById(int Id)

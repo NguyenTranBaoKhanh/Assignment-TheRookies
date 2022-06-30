@@ -27,6 +27,15 @@ namespace BKShop.API.Controllers
             return Ok(categories);
         }
 
+        [HttpGet("Accessory")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAccessoryAsync()
+        {
+            //var categories = _context.Categories.ToList();
+            var categories = await _categoryService.GetAccessoryAsyn();
+            return Ok(categories);
+        }
+
         [HttpGet("{Id}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetById(int Id) //[FromRoute] int id

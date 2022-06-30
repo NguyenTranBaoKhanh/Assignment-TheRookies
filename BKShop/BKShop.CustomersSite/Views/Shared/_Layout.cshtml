@@ -35,23 +35,23 @@
 
 
                 @*<div class="header1__users d-flex">
-                    <div class="header1__user">
-                        <i class="fas fa-user header1__user-icon"></i>
-                        <b class="header1__user-name header1__user-name--separate"><?= $_SESSION['user']['ten'] ?></b>
-                        <div class="header1__user-dropdown">
-                            <ul>
-                                <li><a href="">Thông tin tài khoản</a></li>
-                                <li><a href="">Đơn đặt hàng</a></li>
-                                <li><a href="">Đăng xuất</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="header1__cart">
-                        <a href="<?= DOCUMENT_ROOT ?>/cart">
-                            <i class="fas fa-shopping-bag header1__cart-icon"></i>
-                            <span id="cartAmountId" class="header1__cart-amount">+99</span>
-                        </a>
-                    </div>
+                <div class="header1__user">
+                <i class="fas fa-user header1__user-icon"></i>
+                <b class="header1__user-name header1__user-name--separate"><?= $_SESSION['user']['ten'] ?></b>
+                <div class="header1__user-dropdown">
+                <ul>
+                <li><a href="">Thông tin tài khoản</a></li>
+                <li><a href="">Đơn đặt hàng</a></li>
+                <li><a href="">Đăng xuất</a></li>
+                </ul>
+                </div>
+                </div>
+                <div class="header1__cart">
+                <a href="<?= DOCUMENT_ROOT ?>/cart">
+                <i class="fas fa-shopping-bag header1__cart-icon"></i>
+                <span id="cartAmountId" class="header1__cart-amount">+99</span>
+                </a>
+                </div>
                 </div>*@
 
                 <div class="header1__access">
@@ -79,10 +79,10 @@
                             </div>
                             <div class="header2__nav-dropdown">
                                 <ul>
-                                    @foreach(var item in Model.Brand)
+                                    @foreach (var item in Model.Brands)
                                     {
-                                    <li class="text-center"><a href=""><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
-                                        
+                                        <li class="text-center"><a href=""><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
+
                                     }
                                 </ul>
                             </div>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="header2__nav-dropdown">
                                 <ul>
-                                    @foreach(var item in Model.Brand)
+                                    @foreach (var item in Model.Brands)
                                     {
                                         <li class="text-center"><a href=""><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
                                     }
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                     <div class="header2__nav">
                         <div class="header2__nav-items d-flex flex-column align-items-center">
                             <div class="header2__nav-item d-flex flex-column align-items-center">
@@ -113,7 +113,7 @@
                             </div>
                             <div class="header2__nav-dropdown">
                                 <ul>
-                                    @foreach(var item in Model.Categories)
+                                    @foreach (var item in Model.Acessories)
                                     {
                                         <li class="text-center"><a href=""><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
                                     }

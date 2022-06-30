@@ -5,7 +5,10 @@ namespace BKShop.CustomersSite.Models
     public class HomeViewModel
     {
         public List<CategoryViewModel> Categories;
-        public List<BrandViewModel> Brand;
-        public List<ProductViewModel> Product;
+        public List<CategoryViewModel> Acessories;
+        public List<BrandViewModel> Brands;
+        public List<ProductViewModel> Products;
+        public List<ProductViewModel> ProductTop5;
+        public ProductViewModel Product;
     }
 }

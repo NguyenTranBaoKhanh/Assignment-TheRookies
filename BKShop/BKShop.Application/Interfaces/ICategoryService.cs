@@ -18,6 +18,7 @@ namespace BKShop.Application.Interfaces
         Task<int> DeleteAsync(int categoryId);
 
         Task<List<CategoryViewModel>> GetAllAsync();
+        Task<List<CategoryViewModel>> GetAccessoryAsyn();
         Task<CategoryViewModel> GetByIdAsync(int categoryId);
     }
 }

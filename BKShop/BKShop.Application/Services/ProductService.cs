@@ -152,6 +152,11 @@ namespace BKShop.Application.Services
             throw new NotImplementedException();
         }
 
+        public async Task<List<ProductViewModel>> GetTop5Async()
+        {
+            return await _context.Products.Select(product => _mapper.Map<ProductViewModel>(product)).Take(5).ToListAsync();
+        }
+
         public async Task<int> UpdateAsync(ProductUpdateRequest request)
         {
             var product = await _context.Products.FindAsync(request.Id);

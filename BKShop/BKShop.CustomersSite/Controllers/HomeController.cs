@@ -26,17 +26,33 @@ namespace BKShop.CustomersSite.Controllers
         public async Task<IActionResult> Index()
         {
             var catgories = _categoryApi.GetAllAsync().GetAwaiter().GetResult();
+            var accessories = _categoryApi.GetAccessoryAsync().GetAwaiter().GetResult();
             var brands = _brandApi.GetAllAsync().GetAwaiter().GetResult();
             var products = _productApi.GetAllAsync().GetAwaiter().GetResult();
+            var productsTop5 = _productApi.GetTop5Async().GetAwaiter().GetResult();
             _homeViewModel.Categories = catgories;
-            _homeViewModel.Brand = brands;
-            _homeViewModel.Product = products;
+            _homeViewModel.Acessories = accessories;
+            _homeViewModel.Brands = brands;
+            _homeViewModel.Products = products;
+            _homeViewModel.ProductTop5 = productsTop5;
+
             return View(_homeViewModel);
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Detail(int Id, string Color)
         {
-            return View();
+            var catgories = _categoryApi.GetAllAsync().GetAwaiter().GetResult();
+            var accessory = _categoryApi.GetAccessoryAsync().GetAwaiter().GetResult();
+            var brands = _brandApi.GetAllAsync().GetAwaiter().GetResult();
+            var product = _productApi.GetByIdAsync(Id).GetAwaiter().GetResult();
+
+            _homeViewModel.Brands = brands;
+            _homeViewModel.Categories = catgories;
+            _homeViewModel.Acessories = accessory;
+            _homeViewModel.Product = product;
+
+
+            return View(_homeViewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

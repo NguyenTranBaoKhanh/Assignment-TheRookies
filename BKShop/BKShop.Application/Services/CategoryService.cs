@@ -65,6 +65,15 @@ namespace BKShop.Application.Services
             return await _context.SaveChangesAsync();
         }
 
+        public async Task<List<CategoryViewModel>> GetAccessoryAsyn()
+        {
+            return await _context.Categories.Where(x => x.Id !=1 && x.Id != 4).Select(x => new CategoryViewModel()
+            {
+                Id = x.Id,
+                Name = x.Name,
+            }).ToListAsync();
+        }
+
         public async Task<List<CategoryViewModel>> GetAllAsync()
         {
             return await _context.Categories.Select(category => new CategoryViewModel()
