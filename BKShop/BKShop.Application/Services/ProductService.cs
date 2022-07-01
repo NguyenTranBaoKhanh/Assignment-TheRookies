@@ -126,6 +126,32 @@ namespace BKShop.Application.Services
 
         }
 
+        public async Task<List<ProductViewModel>> GetByAccessoryAsync()
+        {
+            return await _context.Products.Where(x => x.CategoryId != 1 && x.CategoryId!=4).Select(product => _mapper.Map<ProductViewModel>(product)).ToListAsync();
+        }
+
+        public async Task<List<ProductViewModel>> GetByBrandAsync(int brandId)
+        {
+            return await _context.Products.Where(x => x.BrandId == brandId).Select(product => _mapper.Map<ProductViewModel>(product)).ToListAsync();
+        }
+
+        public async Task<List<ProductViewModel>> GetByCategoryAsync(int categoryId)
+        {
+            return await _context.Products.Where(x => x.CategoryId == categoryId).Select(product => _mapper.Map<ProductViewModel>(product)).ToListAsync();
+        }
+
+        public async Task<List<ProductViewModel>> GetByCategoryByBrandAsync(int categoryId, int brandId)
+        {
+            return await _context.Products.Where(x => x.CategoryId == categoryId && x.BrandId == brandId).Select(product => _mapper.Map<ProductViewModel>(product)).ToListAsync();
+        }
+
+        public async Task<List<ProductViewModel>> GetByColorAndGroupAsync(string color, string group)
+        {
+              return await _context.Products.Where(x => x.Color== color && x.Group==group).Select(product => _mapper.Map<ProductViewModel>(product)).ToListAsync();
+
+        }
+
         public async Task<ProductViewModel> GetByIdAsync(int productId)
         {
             var product = await _context.Products.Where(x => x.Id == productId).FirstOrDefaultAsync();
@@ -145,6 +171,14 @@ namespace BKShop.Application.Services
             //    Description = product.Description,
             //};
             //return productVm;
+        }
+
+        public async Task<List<ArrayViewModel>> GetColorByGroupAsync(string group)
+        {
+            return await _context.Products.Where(x => x.Group == group).Select(product => new ArrayViewModel()
+            {
+                item = product.Color
+            }).Distinct().ToListAsync();
         }
 
         public Task<List<ProductViewModel>> GetLatestProduct()

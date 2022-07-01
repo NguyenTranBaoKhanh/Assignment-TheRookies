@@ -46,6 +46,8 @@ namespace BKShop.Application.Services
             return await _context.SaveChangesAsync();
         }
 
+
+
         public async Task<List<BrandViewModel>> GetAllAsync()
         {
             return await _context.Brands.Select(brand => new BrandViewModel()
@@ -61,6 +63,20 @@ namespace BKShop.Application.Services
             if (brand == null)
             {
                 throw new BKShopException($"Cannot find brand with Id = {brandId}");
+            }
+            return new BrandViewModel()
+            {
+                Id = brand.Id,
+                Name = brand.Name,
+            };
+        }
+
+        public async Task<BrandViewModel> GetByNameAsync(string name)
+        {
+            var brand = await _context.Brands.Where(x => x.Name == name).FirstOrDefaultAsync();
+            if (brand == null)
+            {
+                throw new BKShopException($"Cannot find brand with Name = {name}");
             }
             return new BrandViewModel()
             {
