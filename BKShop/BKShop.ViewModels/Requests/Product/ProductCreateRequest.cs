@@ -29,6 +29,8 @@ namespace BKShop.ViewModels.Requests.Product
         [Required]
         [Range(1, 99, ErrorMessage = "Stock from {1} to {2}")]
         public int Stock { get; set; }
+        public string Group { get; set; }
+
 
         public string Image { get; set; }
     }
