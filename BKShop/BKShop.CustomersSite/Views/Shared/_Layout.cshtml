@@ -55,8 +55,8 @@
                 </div>*@
 
                 <div class="header1__access">
-                    <a href="" class="login__link header1__user-name--separate">Đăng nhập</a>
-                    <a href="" class="register__link">Đăng ký</a>
+                    <a asp-controller="account" asp-action="index" class="login__link header1__user-name--separate">Đăng nhập</a>
+                    <a asp-controller="account" asp-action="register" class="register__link">Đăng ký</a>
                 </div>
 
             </div>
@@ -64,7 +64,7 @@
 
             <div class="header2">
                 <div class="container d-flex align-items-center justify-content-between">
-                    <a href="<?= DOCUMENT_ROOT ?>"><img class="header2__logo" src="/themes//img/BK Shop-transparent - Copy1.png" alt=""></a>
+                    <a asp-controller="home" asp-action="index"><img class="header2__logo" src="/themes/img/BK Shop-transparent - Copy1.png" alt=""></a>
                     <div class="header2__search">
                         <form action="" method="get">
                             <input class="header2__search-input" id="search" name="search" type="text" placeholder="Tìm kiếm...">
@@ -74,14 +74,14 @@
                     <div class="header2__nav">
                         <div class="header2__nav-items d-flex flex-column align-items-center">
                             <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a href=""><i class="fas fa-mobile-alt header2__nav-icon"></i></a>
+                                <a asp-controller="Smartphone" asp-action="index"><i class="fas fa-mobile-alt header2__nav-icon"></i></a>
                                 <div class="header2__nav-name"><a href="">ĐIỆN THOẠI</a></div>
                             </div>
                             <div class="header2__nav-dropdown">
                                 <ul>
                                     @foreach (var item in Model.Brands)
                                     {
-                                        <li class="text-center"><a href=""><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
+                                        <li class="text-center"><a asp-controller="smartphone" asp-action="Brand" asp-route-Id="@item.Id" ><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
 
                                     }
                                 </ul>
@@ -91,14 +91,14 @@
                     <div class="header2__nav">
                         <div class="header2__nav-items d-flex flex-column align-items-center">
                             <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a href="" <i class="fas fa-tablet-alt header2__nav-icon"></i></a>
+                                <a asp-controller="tablet" asp-action="index"> <i class="fas fa-tablet-alt header2__nav-icon"></i></a>
                                 <div class="header2__nav-name"><a href="">MÁY TÍNH BẢNG</a></div>
                             </div>
                             <div class="header2__nav-dropdown">
                                 <ul>
                                     @foreach (var item in Model.Brands)
                                     {
-                                        <li class="text-center"><a href=""><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
+                                        <li class="text-center"><a asp-controller="tablet" asp-action="Brand" asp-route-Id="@item.Id"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
                                     }
                                 </ul>
                             </div>
@@ -108,7 +108,7 @@
                     <div class="header2__nav">
                         <div class="header2__nav-items d-flex flex-column align-items-center">
                             <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a href=""><i class="fas fa-headphones header2__nav-icon"></i></a>
+                                <a asp-controller="accessory" asp-action="index"><i class="fas fa-headphones header2__nav-icon"></i></a>
                                 <div class="header2__nav-name"><a href="">PHỤ KIỆN</a></div>
                             </div>
                             <div class="header2__nav-dropdown">
@@ -221,6 +221,21 @@
             },
         });
         var swiper = new Swiper(".mySwiper3", {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            slidesPerGroup: 3,
+            loop: false,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        var swiper = new Swiper(".mySwiper4", {
             slidesPerView: 5,
             spaceBetween: 10,
             slidesPerGroup: 3,
