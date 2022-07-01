@@ -29,7 +29,7 @@ namespace BKShop.API.Controllers
 
         [HttpGet("{Id}")]
         [AllowAnonymous]
-        public async Task<IActionResult> GetById(int Id)
+        public async Task<IActionResult> GetById([FromRoute] int Id)
         {
             try
             {
@@ -42,6 +42,26 @@ namespace BKShop.API.Controllers
                 return Ok(brand);
 
             }catch(Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpGet("Name/{Name}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetByName([FromRoute]string Name)
+        {
+            try
+            {
+                //var product = _context.Brands.FirstOrDefault(p => p.Id == id);
+                var brand = await _brandService.GetByNameAsync(Name);
+                if (brand == null)
+                {
+                    return NotFound($"Cannot find a brand with Name: {Name}");
+                }
+                return Ok(brand);
+
+            }
+            catch (Exception e)
             {
                 return BadRequest(e.Message);
             }

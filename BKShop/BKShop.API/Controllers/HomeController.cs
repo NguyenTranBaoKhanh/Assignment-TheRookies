@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShoesHouse.BackendApi.Controllers
+namespace BKShop.BackendApi.Controllers
 {
     public class HomeController : Controller
     {

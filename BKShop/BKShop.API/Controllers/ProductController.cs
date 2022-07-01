@@ -135,5 +135,95 @@ namespace BKShop.API.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+        [HttpGet("Color/{color}/{group}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetByColorAndGroup([FromRoute] string color, string group)
+        {
+            try
+            {
+                var data = await _productService.GetByColorAndGroupAsync(color, group);
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("Category/{Id}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetByCategory([FromRoute] int Id)
+        {
+            try
+            {
+                var data = await _productService.GetByCategoryAsync(Id);
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("Brand/{Id}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetByBrand([FromRoute] int Id)
+        {
+            try
+            {
+                var data = await _productService.GetByBrandAsync(Id);
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("{categoryId}/{brandId}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetByCategoryByBrand([FromRoute] int categoryId, int brandId)
+        {
+            try
+            {
+                var data = await _productService.GetByCategoryByBrandAsync(categoryId, brandId);
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("Accessory")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetByAccessory()
+        {
+            try
+            {
+                var data = await _productService.GetByAccessoryAsync();
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("Color/{group}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetColorByGroup([FromRoute]string group)
+        {
+            try
+            {
+                var data = await _productService.GetColorByGroupAsync(group);
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
     }
 }
