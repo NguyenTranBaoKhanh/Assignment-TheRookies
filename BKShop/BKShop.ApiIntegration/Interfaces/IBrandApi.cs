@@ -12,5 +12,8 @@ namespace BKShop.ApiIntegration.Interfaces
     {
         [Get("/api/Brand")]
         Task<List<BrandViewModel>> GetAllAsync();
+
+        [Get("/api/Brand/{Id}")]
+        Task<BrandViewModel> GetByIdAsync(int Id);
     }
 }
