@@ -20,7 +20,17 @@ namespace BKShop.Application.Interfaces
 
         Task<List<ProductViewModel>> GetTop5Async();
 
+        Task<List<ProductViewModel>> GetByCategoryAsync(int categoryId);
+        Task<List<ProductViewModel>> GetByBrandAsync(int brandId);
+
+        Task<List<ProductViewModel>> GetByColorAndGroupAsync(string color, string group);
+
+        Task<List<ProductViewModel>> GetByCategoryByBrandAsync(int categoryId, int brandId);
+
+        Task<List<ArrayViewModel>> GetColorByGroupAsync(string group);
+
         Task<ProductViewModel> GetByIdAsync(int productId);
+        Task<List<ProductViewModel>> GetByAccessoryAsync();
 
         Task<PagedResult<ProductViewModel>> GetAllPagingAsync(GetProductPagingRequest request);
 

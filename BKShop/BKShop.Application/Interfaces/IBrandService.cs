@@ -18,6 +18,8 @@ namespace BKShop.Application.Interfaces
         Task<int> DeleteAsync(int brandId);
 
         Task<List<BrandViewModel>> GetAllAsync();
+        
+        Task<BrandViewModel> GetByNameAsync(string name);
         Task<BrandViewModel> GetByIdAsync(int brandId);
     }
 }
