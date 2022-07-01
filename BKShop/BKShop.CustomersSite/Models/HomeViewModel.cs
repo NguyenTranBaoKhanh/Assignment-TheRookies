@@ -10,5 +10,10 @@ namespace BKShop.CustomersSite.Models
         public List<ProductViewModel> Products;
         public List<ProductViewModel> ProductTop5;
         public ProductViewModel Product;
+        public BrandViewModel Brand;
+        public String color_url;
+        public int id_url;
+        public List<ProductViewModel> ProductByColorAndGroup;
+        public List<ArrayViewModel> Colors;
     }
 }
