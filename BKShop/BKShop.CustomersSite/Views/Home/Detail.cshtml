@@ -61,10 +61,9 @@
                 <div class="row row-cols-3 options">
                     @foreach (var item in Model.ProductByColorAndGroup)
                     {
-
-                        <a asp-controller="home" asp-action="detail" asp-all-route-Id="@item.Id" asp-route-Color="@item.Color" class="option @(item.Id == @Model.id_url ? "active" : " ") ">
+                        <a asp-controller="home" asp-action="detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color" class="option @(item.Id == @Model.id_url ? "active" : " ") ">
                             <div class="storage">@item.Capacity</div>
-                            <div class="price">@item.Price</div>
+                            <div class="price">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</div>
                         </a>
                     }
                 </div>
