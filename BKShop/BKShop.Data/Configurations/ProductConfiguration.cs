@@ -15,6 +15,8 @@ namespace BKShop.Data.Configurations
         {
             builder.Property(x => x.Name).IsRequired();
             builder.Property(x => x.Price);
+            builder.Property(x => x.Stars).HasDefaultValue(0);
+            builder.Property(x => x.IsDeleted).HasDefaultValue(false);
 
         }
     }
