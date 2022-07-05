@@ -1,8 +1,8 @@
-﻿@page 
-@model IndexModel
+﻿@page
+@model BKShop.CustomersSite.Pages.Smartphone.IndexModel
 @{
 }
-<h1>smartphone nef</h1>
+<h1>smartphone ne</h1>
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -17,12 +17,10 @@
         <div class=" row row-cols-5 items">
             @if (Model._homeViewModel.Products.Count() != 0)
             {
-
-
                 @foreach (var item in Model._homeViewModel.Products)
                 {
                     <div class="col item">
-                        <a asp-controller="home" asp-action="detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
+                        <a asp-page="/detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
                             <div class="item__img" style="background-image: url(/themes/img/@item.Image);"></div>
                             <h4 class="item__name">@item.Name</h4>
                             <div class="item__price d-flex-end">

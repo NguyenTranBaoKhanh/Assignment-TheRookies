@@ -24,9 +24,6 @@ namespace BKShop.CustomersSite.Pages.Smartphone
             _homeViewModel = new HomeViewModel();
 
         }
-        //public void OnGet()
-        //{
-        //}
         public async Task<IActionResult> OnGetAsync(int Id)
         {
             var catgories = _categoryApi.GetAllAsync().GetAwaiter().GetResult();

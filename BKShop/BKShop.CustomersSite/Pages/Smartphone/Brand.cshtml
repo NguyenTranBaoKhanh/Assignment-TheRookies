@@ -22,7 +22,7 @@
                 @foreach (var item in Model._homeViewModel.Products)
                 {
                     <div class="col item">
-                        <a asp-controller="Home" asp-action="Detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
+                        <a asp-page="/detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
                             <div class="item__img" style="background-image: url(/themes/img/@item.Image);"></div>
                             <h4 class="item__name">@item.Name</h4>
                             <div class="item__price d-flex-end">
