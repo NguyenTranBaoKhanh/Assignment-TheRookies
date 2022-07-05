@@ -49,6 +49,7 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IBrandService, BrandService>();
+builder.Services.AddTransient<IReviewService, ReviewService>();
 //builder.Services.AddTransient<IStorageService, StorageService>();
 
 // DI for identity
