@@ -9,6 +9,7 @@ namespace BKShop.API
         public MappingProfile()
         {
             CreateMap<Product, ProductViewModel>();
+            CreateMap<Review, ReviewViewModel>();
         }
     }
 }
