@@ -15,5 +15,7 @@ namespace BKShop.CustomersSite.Models
         public int id_url;
         public List<ProductViewModel> ProductByColorAndGroup;
         public List<ArrayViewModel> Colors;
+        public List<ReviewViewModel> Reviews;
+        public double AvgStar;
     }
 }
