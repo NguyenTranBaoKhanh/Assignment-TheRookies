@@ -74,7 +74,7 @@
                     <div class="header2__nav">
                         <div class="header2__nav-items d-flex flex-column align-items-center">
                             <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a asp-controller="Smartphone" asp-action="index"><i class="fas fa-mobile-alt header2__nav-icon"></i></a>
+                                <a asp-page="/smartphone/index"><i class="fas fa-mobile-alt header2__nav-icon"></i></a>
                                 <div class="header2__nav-name"><a href="">ĐIỆN THOẠI</a></div>
                             </div>
                             <div class="header2__nav-dropdown">
@@ -91,14 +91,14 @@
                     <div class="header2__nav">
                         <div class="header2__nav-items d-flex flex-column align-items-center">
                             <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a asp-controller="tablet" asp-action="index"> <i class="fas fa-tablet-alt header2__nav-icon"></i></a>
+                                <a asp-page="/tablet/index"> <i class="fas fa-tablet-alt header2__nav-icon"></i></a>
                                 <div class="header2__nav-name"><a href="">MÁY TÍNH BẢNG</a></div>
                             </div>
                             <div class="header2__nav-dropdown">
                                 <ul>
                                     @foreach (var item in Model._homeViewModel.Brands)
                                     {
-                                        <li class="text-center"><a asp-controller="tablet" asp-action="Brand" asp-route-Id="@item.Id"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
+                                        <li class="text-center"><a asp-page="/tablet/brand" asp-route-Id="@item.Id" asp-route-Id="@item.Id"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
                                     }
                                 </ul>
                             </div>
@@ -143,7 +143,7 @@
     @RenderBody()
     <!-- product -->
     <a id="gototop" href="#header"><i class="fas fa-caret-square-up"></i></a>
-    <h1>LayoutPages</h1>
+    <h1>LayoutPages nè</h1>
     <!-- footer -->
     <div class="wrapper footer__top">
         <footer class="container d-flex justify-content-between pt-5">
