@@ -26,7 +26,8 @@ namespace BKShop.Data.Entities
         public string Group { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate {get; set; }
-
+        public double Stars { get; set; }
+        public bool IsDeleted { get; set; }
         public List<Review> Reviews { get; set; }
 
 

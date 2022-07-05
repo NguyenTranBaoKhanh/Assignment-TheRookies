@@ -22,5 +22,7 @@ namespace BKShop.Data.Entities
         public DateTime? DateModified { get; set; }
         public DateTime? DateDeleted { get; set; }
         public DateTime DateCreated { get; set; }
+
+        
     }
 }
