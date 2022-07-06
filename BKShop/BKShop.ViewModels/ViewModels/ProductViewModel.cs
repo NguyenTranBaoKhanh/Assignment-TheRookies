@@ -19,7 +19,7 @@ namespace BKShop.ViewModels.ViewModels
         public string Description { get; set; }
         public string Image { get; set; }
         public string Group { get; set; }
-        public double Star { get; set; }
+        public double Stars { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
     }
