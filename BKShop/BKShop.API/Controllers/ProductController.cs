@@ -225,5 +225,22 @@ namespace BKShop.API.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+        [HttpPut("UpdateStar")]
+        [AllowAnonymous]
+        public async Task<IActionResult> UpdateStar([FromBody] ProductStarUpdateRequest request)
+        {
+            var result = await _productService.UpdateStarAsync(request);
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            var product = await _productService.GetByIdAsync(request.productId);
+            if (product == null)
+            {
+                return BadRequest();
+            }
+            return Ok(product);
+        }
     }
 }
