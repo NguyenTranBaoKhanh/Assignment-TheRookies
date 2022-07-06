@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Flurl" Version="3.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BKShop.ApiIntegration\BKShop.ApiIntegration.csproj" />
     <ProjectReference Include="..\BKShop.ViewModels\BKShop.ViewModels.csproj" />
   </ItemGroup>
