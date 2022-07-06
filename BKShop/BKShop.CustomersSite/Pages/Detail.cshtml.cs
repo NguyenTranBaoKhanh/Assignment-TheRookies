@@ -1,8 +1,11 @@
 using BKShop.ApiIntegration.Interfaces;
 using BKShop.CustomersSite.Models;
+using BKShop.ViewModels.Requests.Product;
+using BKShop.ViewModels.Requests.Review;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Refit;
+using System.Net;
 
 namespace BKShop.CustomersSite.Pages
 {
@@ -61,6 +64,27 @@ namespace BKShop.CustomersSite.Pages
             _homeViewModel.AvgStar = avgStar;
 
             return Page();
+        }
+
+        public async Task<IActionResult> OnPostAsync(int Id, ReviewCreateRequest Rrequest, ProductStarUpdateRequest Urequest)
+        {
+
+            Rrequest.UserId = new Guid("BFF91064-DC92-421E-A233-D1080F630928");
+            Rrequest.ProductId = Id;
+            Urequest.productId = Id;
+            //Rrequest.Star = Request.Form["star"];
+            _reviewApi.CreateAsync(Rrequest).GetAwaiter().GetResult();
+            Urequest.Stars = _reviewApi.GetAverageStarAsync(Id).GetAwaiter().GetResult();
+            _productApi.UpdateStarAsync(Urequest).GetAwaiter().GetResult();
+
+            var product = _productApi.GetByIdAsync(Id).GetAwaiter().GetResult();
+            string url = "detail?Id=" + Id + "&Color=" + product.Color;
+
+            var encoded = Flurl.Url.EncodeIllegalCharacters(url);
+            return base.Redirect(encoded);
+            //return Redirect(url);
+
+
         }
     }
 }
