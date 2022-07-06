@@ -211,6 +211,17 @@ namespace BKShop.Application.Services
             return await _context.SaveChangesAsync();
         }
 
+        public async Task<int> UpdateStarAsync(ProductStarUpdateRequest request)
+        {
+            var product = await _context.Products.Where(product => product.Id == request.productId).FirstOrDefaultAsync();
+            if(product.Stars == request.Stars)
+            {
+                return 1;
+            }
+            product.Stars = request.Stars;
+            return await _context.SaveChangesAsync();
+        }
+
         //private async Task<string> SaveFile(IFormFile file)
         //{
         //    var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');

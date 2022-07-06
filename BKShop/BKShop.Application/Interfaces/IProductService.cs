@@ -38,6 +38,8 @@ namespace BKShop.Application.Interfaces
 
         Task<int> AddComment(int productId, string comment, Guid user);
 
+        Task<int> UpdateStarAsync(ProductStarUpdateRequest request);
+
         
     }
 }
