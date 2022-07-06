@@ -1,4 +1,5 @@
-﻿using BKShop.ViewModels.ViewModels;
+﻿using BKShop.ViewModels.Requests.Product;
+using BKShop.ViewModels.ViewModels;
 using Refit;
 using System;
 using System.Collections.Generic;
@@ -33,5 +34,8 @@ namespace BKShop.ApiIntegration.Interfaces
         
         [Get("/api/Product/Color/{Group}")]
         Task<List<ArrayViewModel>> GetColorByGroupAsync(string Group);
+
+        [Put("/api/Product/UpdateStar")]
+        Task<ProductViewModel> UpdateStarAsync(ProductStarUpdateRequest request);
     }
 }
