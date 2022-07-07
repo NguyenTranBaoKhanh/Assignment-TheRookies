@@ -81,14 +81,14 @@
                     <div class="header2__nav">
                         <div class="header2__nav-items d-flex flex-column align-items-center">
                             <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a asp-controller="accessory" asp-action="index"><i class="fas fa-headphones header2__nav-icon"></i></a>
+                                <a asp-page="/accessory/index"><i class="fas fa-headphones header2__nav-icon"></i></a>
                                 <div class="header2__nav-name"><a href="">PHỤ KIỆN</a></div>
                             </div>
                             <div class="header2__nav-dropdown">
                                 <ul>
                                     @foreach (var item in Model._homeViewModel.Acessories)
                                     {
-                                        <li class="text-center"><a href=""><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
+                                        <li class="text-center"><a asp-page="/accessory/category" asp-route-Id="@item.Id"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
                                     }
                                 </ul>
                             </div>
