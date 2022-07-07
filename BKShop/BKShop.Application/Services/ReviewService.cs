@@ -58,7 +58,7 @@ namespace BKShop.Application.Services
 
         public async Task<List<ReviewViewModel>> GetAllAsync()
         {
-            return await _context.Reviews.Select(review => _mapper.Map<ReviewViewModel>(review)).ToListAsync();
+            return await _context.Reviews.OrderByDescending(review => review.Id).Select(review => _mapper.Map<ReviewViewModel>(review)).ToListAsync();
 
         }
 
@@ -98,7 +98,7 @@ namespace BKShop.Application.Services
 
         public async Task<List<ReviewViewModel>> GetByProductIdAsync(int productId)
         {
-            return await _context.Reviews.Where(review => review.ProductId == productId).Select(review => new ReviewViewModel()
+            return await _context.Reviews.Where(review => review.ProductId == productId).OrderByDescending(review => review.Id).Select(review => new ReviewViewModel()
             {
                 Id = review.Id,
                 UserId = review.UserId,
