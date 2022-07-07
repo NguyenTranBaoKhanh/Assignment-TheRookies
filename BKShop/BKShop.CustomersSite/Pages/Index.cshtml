@@ -5,35 +5,7 @@
 
 <!-- banner -->
 <h1>Này là của Pages</h1>
-<div class="wrapper">
-    <div class="container banner">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#"><img class="banner__img" src="/themes/img/banner/oneplus-8-mobilecity.jpg" alt=""></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#"><img class="banner__img" src="/themes/img/banner/gt-neo_1623979053.jpg" alt=""></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#"><img class="banner__img" src="/themes/img/banner/oneplus-9r-banner-mobilecity.jpg" alt=""></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#"><img class="banner__img" src="/themes/img/banner/poco-m3-dgw.jpg" alt=""></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#"><img class="banner__img" src="/themes/img/banner/poco-x3-pro-dgw.jpg" alt=""></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#"><img class="banner__img" src="/themes/img/banner/realme-v15_1627787114.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-</div>
+@await Html.PartialAsync("_Banner")
 <!-- banner -->
 <!-- product -->
 <div class="wrapper">
@@ -43,45 +15,9 @@
                 BÁN CHẠY
             </div>
             <!-- bestseller -->
-            <div class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                    @*<?php foreach ($data['pupular'] as $index => $item) : ?>
-                    <div class="swiper-slide">
-                    <a href="<?= DOCUMENT_ROOT . "/home/detail/" . $item['id'] . "/" . $item['mau'] ?>">
-                    <div class="wipper__item">
-                    <div class="wipper__item__img" style="background-image: url(/themes/img/<?= $item['hinh'] ?>);"></div>
-                    <h4 class="wipper__item__name"><?= $item['ten'] ?></h4>
-                    <div class="wipper__item__price d-flex-end">
-                    <span class="wipper__item__price-old"><?= $item['gia'] ?>đ</span>
-                    <span class="wipper__item__price-current"><?= number_format($item['gia'] * 0.9) ?>đ</span>
-                    </div>
-                    <a href="" class="btn btn-primary wipper__item__btn">Mua</a>
-                    </div>
-                    </a>
-                    </div>
-                    <?php endforeach; ?>*@
-                    @foreach (var item in Model._homeViewModel.ProductTop5)
-                    {
-                        <div class="swiper-slide">
-                            <a asp-page="detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
-                                <div class="wipper__item">
-                                    <div class="wipper__item__img" style="background-image: url(/themes/img/@item.Image);"></div>
-                                    <h4 class="wipper__item__name">@item.Name</h4>
-                                    <div class="wipper__item__price d-flex-end">
-                                        <span class="wipper__item__price-old">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</span>
-                                        <span class="wipper__item__price-current">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</span>
-                                    </div>
-                                    <a href="" class="btn btn-primary wipper__item__btn">Mua</a>
-                                </div>
-                            </a>
-                        </div>
-                    }
+            @await Component.InvokeAsync("BestSeller")
+            <!-- bestseller -->
 
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
         </div>
     </div>
     <div class="background__sub">
@@ -115,21 +51,22 @@
                 </div>*@
                 <div class="swiper mySwiper3">
                     <div class="swiper-wrapper">
-                        @foreach(var item in Model._homeViewModel.ProductTop5){
-                            
-                        <div class="swiper-slide">
-                            <a asp-page="detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
-                                <div class="wipper__item">
-                                    <div class="wipper__item__img" style="background-image: url(/themes/img/@item.Image);"></div>
-                                    <h4 class="wipper__item__name">@item.Name</h4>
-                                    <div class="wipper__item__price d-flex-end">
-                                        <span class="wipper__item__price-old">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</span>
-                                        <span class="wipper__item__price-current">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</span>
+                        @foreach (var item in Model._homeViewModel.ProductTop5)
+                        {
+
+                            <div class="swiper-slide">
+                                <a asp-page="detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
+                                    <div class="wipper__item">
+                                        <div class="wipper__item__img" style="background-image: url(/themes/img/@item.Image);"></div>
+                                        <h4 class="wipper__item__name">@item.Name</h4>
+                                        <div class="wipper__item__price d-flex-end">
+                                            <span class="wipper__item__price-old">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</span>
+                                            <span class="wipper__item__price-current">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</span>
+                                        </div>
+                                        <a href="" class="btn btn-primary wipper__item__btn">Mua</a>
                                     </div>
-                                    <a href="" class="btn btn-primary wipper__item__btn">Mua</a>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
                         }
                     </div>
                     <div class="swiper-button-next"></div>
@@ -189,24 +126,24 @@
             </div>
             <!-- <div class="see-more">Xem thêm sản phẩm</div> -->
             <div class="item__pagination">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item ">
-                        <a onclick="event.preventDefault()" class="page-link" href="<?= DOCUMENT_ROOT . " /dienthoai/hang?hang =" . $_GET['hang'] . " &page=" . ($data['page'] - 1) ?>" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item "><a class="page-link" href="" ?>1</a></li>
-                    <li class="page-item page-active"><a class="page-link" href="" ?>2</a></li>
-                    <li class="page-item "><a class="page-link" href="" ?>3</a></li>
-                    <li class="page-item ">
-                        <a onclick="event.preventDefault()" class="page-link" href="<?= DOCUMENT_ROOT . " /dienthoai/hang?hang =" . $_GET['hang'] . " &page=" . ($data['page'] + 1) ?>" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item ">
+                            <a onclick="event.preventDefault()" class="page-link" href="<?= DOCUMENT_ROOT . " /dienthoai/hang?hang =" . $_GET['hang'] . " &page=" . ($data['page'] - 1) ?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item "><a class="page-link" href="" ?>1</a></li>
+                        <li class="page-item page-active"><a class="page-link" href="" ?>2</a></li>
+                        <li class="page-item "><a class="page-link" href="" ?>3</a></li>
+                        <li class="page-item ">
+                            <a onclick="event.preventDefault()" class="page-link" href="<?= DOCUMENT_ROOT . " /dienthoai/hang?hang =" . $_GET['hang'] . " &page=" . ($data['page'] + 1) ?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 
