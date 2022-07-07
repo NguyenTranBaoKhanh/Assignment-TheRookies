@@ -25,157 +25,22 @@
 </head>
 
 <body>
-    @*@model IndexModel*@
     <!-- header -->
+    @await Html.PartialAsync("_Header")
     <!-- header -->
-    <div class="wrapper">
-        <header id="header" class="header">
-            <div class="header1 container d-flex justify-content-between align-items-center">
-                <marquee class="header1__slogan" behavior="" direction="">UY TÍN - AN TOÀN - TIỆN LỢI</marquee>
 
-
-                @*<div class="header1__users d-flex">
-                <div class="header1__user">
-                <i class="fas fa-user header1__user-icon"></i>
-                <b class="header1__user-name header1__user-name--separate"><?= $_SESSION['user']['ten'] ?></b>
-                <div class="header1__user-dropdown">
-                <ul>
-                <li><a href="">Thông tin tài khoản</a></li>
-                <li><a href="">Đơn đặt hàng</a></li>
-                <li><a href="">Đăng xuất</a></li>
-                </ul>
-                </div>
-                </div>
-                <div class="header1__cart">
-                <a href="<?= DOCUMENT_ROOT ?>/cart">
-                <i class="fas fa-shopping-bag header1__cart-icon"></i>
-                <span id="cartAmountId" class="header1__cart-amount">+99</span>
-                </a>
-                </div>
-                </div>*@
-
-                <div class="header1__access">
-                    <a asp-controller="account" asp-action="index" class="login__link header1__user-name--separate">Đăng nhập</a>
-                    <a asp-controller="account" asp-action="register" class="register__link">Đăng ký</a>
-                </div>
-
-            </div>
-
-
-            <div class="header2">
-                <div class="container d-flex align-items-center justify-content-between">
-                    <a asp-controller="home" asp-action="index"><img class="header2__logo" src="/themes/img/BK Shop-transparent - Copy1.png" alt=""></a>
-                    <div class="header2__search">
-                        <form action="" method="get">
-                            <input class="header2__search-input" id="search" name="search" type="text" placeholder="Tìm kiếm...">
-                            <label class="header2__search-icon" for="search"><i class="fas fa-search header2__search-icon"></i></label>
-                        </form>
-                    </div>
-                    <div class="header2__nav">
-                        <div class="header2__nav-items d-flex flex-column align-items-center">
-                            <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a asp-page="/smartphone/index"><i class="fas fa-mobile-alt header2__nav-icon"></i></a>
-                                <div class="header2__nav-name"><a href="">ĐIỆN THOẠI</a></div>
-                            </div>
-                            <div class="header2__nav-dropdown">
-                                <ul>
-                                    @foreach (var item in Model._homeViewModel.Brands)
-                                    {
-                                        <li class="text-center"><a asp-page="/smartphone/brand" asp-route-Id="@item.Id" ><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
-
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header2__nav">
-                        <div class="header2__nav-items d-flex flex-column align-items-center">
-                            <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a asp-page="/tablet/index"> <i class="fas fa-tablet-alt header2__nav-icon"></i></a>
-                                <div class="header2__nav-name"><a href="">MÁY TÍNH BẢNG</a></div>
-                            </div>
-                            <div class="header2__nav-dropdown">
-                                <ul>
-                                    @foreach (var item in Model._homeViewModel.Brands)
-                                    {
-                                        <li class="text-center"><a asp-page="/tablet/brand" asp-route-Id="@item.Id" asp-route-Id="@item.Id"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="header2__nav">
-                        <div class="header2__nav-items d-flex flex-column align-items-center">
-                            <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a asp-controller="accessory" asp-action="index"><i class="fas fa-headphones header2__nav-icon"></i></a>
-                                <div class="header2__nav-name"><a href="">PHỤ KIỆN</a></div>
-                            </div>
-                            <div class="header2__nav-dropdown">
-                                <ul>
-                                    @foreach (var item in Model._homeViewModel.Acessories)
-                                    {
-                                        <li class="text-center"><a href=""><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>@item.Name</a></li>
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="header2__nav">
-                        <div class="header2__nav-items d-flex flex-column align-items-center">
-                            <div class="header2__nav-item d-flex flex-column align-items-center">
-                                <a href="#footer"><i class="fas fa-phone-volume header2__nav-icon"></i></a>
-                                <div class="header2__nav-name"><a href="#footer">LIÊN HỆ</a></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </header>
-    </div>
-    <!-- header -->
-    <!-- header -->
     <!-- banner -->
     <!-- banner -->
+
     <!-- product -->
     @RenderBody()
     <!-- product -->
+
     <a id="gototop" href="#header"><i class="fas fa-caret-square-up"></i></a>
     <h1>LayoutPages nè</h1>
+
     <!-- footer -->
-    <div class="wrapper footer__top">
-        <footer class="container d-flex justify-content-between pt-5">
-            <img src="/themes/img/BK-logos_transparent.png" alt="" class="footer__logo">
-            <ul class="footer__list">
-                <h6>Quy định - chính sách</h6>
-                <li>Chính sách bảo hành</li>
-                <li>Chính sách vận chuyển</li>
-                <li>Chính sách đổi trả hàng</li>
-                <li>Hướng dẫn thanh toán</li>
-                <li>Chính sách bảo mật thông tin</li>
-            </ul>
-            <ul class="footer__list">
-                <h6>Đăng ký nhận bảng tin</h6>
-                <li class="d-flex">
-                    <input type="text">
-                    <button class="btn item__btn">Gởi</button>
-                </li>
-            </ul>
-            <ul class="footer__list">
-                <h6>Xã hội</h6>
-                <li class="footer__list_social--icon d-flex">
-                    <a href="https://facebook.com/100007747866089"><img src="/themes/icon/icons8-facebook-48.png" alt="facebook" /></a>
-                    <a href="https://github.com/NguyenTranBaoKhanh"><img src="/themes/icon/icons8-github-48.png" alt="github" /></a>
-                    <a href="https://www.instagram.com/khanh.nguyentranbao/"><img src="/themes/icon/icons8-instagram-48.png" alt="instagram" /></a>
-                </li>
-            </ul>
-        </footer>
-    </div>
-    <div class="wrapper footer__copyright">
-        <p>Copyright © 2021 NGUYEN TRAN BAO KHANH</p>
-    </div>
+    @await Html.PartialAsync("_Footer")
     <!-- footer -->
 
 
