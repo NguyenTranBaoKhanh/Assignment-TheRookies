@@ -13,6 +13,9 @@ namespace BKShop.ApiIntegration.Interfaces
         [Get("/api/Category")]
         Task<List<CategoryViewModel>> GetAllAsync();
 
+        [Get("/api/Category/{Id}")]
+        Task<CategoryViewModel> GetByIdAsync(int Id);
+
         [Get("/api/Category/Accessory")]
         Task<List<CategoryViewModel>> GetAccessoryAsync();
 
