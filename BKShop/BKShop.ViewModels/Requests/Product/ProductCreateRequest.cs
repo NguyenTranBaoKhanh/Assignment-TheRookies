@@ -12,27 +12,17 @@ namespace BKShop.ViewModels.Requests.Product
 {
     public class ProductCreateRequest
     {
-        [Required]
         public string Name { get; set; }
-        [Required]
         public int CategoryId { get; set; }
-        [Required]
         public int BrandId { get; set; }
-        [Required]
         public string Color { get; set; }
-        [Required]
         public string Capacity { get; set; }
-        [Required]
         public int Price { get; set; }
         public string Description { get; set; }
-        [DataType(DataType.Currency)]
-        [Required]
         [Range(1, 99, ErrorMessage = "Stock from {1} to {2}")]
         public int Stock { get; set; }
         public string Group { get; set; }
-
-
-        public string Image { get; set; }
+        public string? Image { get; set; }
     }
 
 }
