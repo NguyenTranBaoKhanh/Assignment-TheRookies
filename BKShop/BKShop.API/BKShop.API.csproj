@@ -26,4 +26,8 @@
     <ProjectReference Include="..\BKShop.Data\BKShop.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>
