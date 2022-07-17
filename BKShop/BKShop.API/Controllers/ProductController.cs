@@ -14,10 +14,12 @@ namespace BKShop.API.Controllers
     {
         private readonly BKShopDbContext _context;
         private readonly IProductService _productService;
-        public ProductController(BKShopDbContext context, IProductService productService)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public ProductController(BKShopDbContext context, IProductService productService, IWebHostEnvironment hostEnvironment)
         {
             _productService = productService;
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         [HttpGet]
@@ -26,6 +28,7 @@ namespace BKShop.API.Controllers
         {
             //var products = _context.Products.ToList();
             var products = await _productService.GetAllAsync();
+            products.ForEach(p => p.Image = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, p.Image));
             return Ok(products);
         }
 
@@ -35,6 +38,7 @@ namespace BKShop.API.Controllers
         {
             //var products = _context.Products.ToList();
             var products = await _productService.GetTop5Async();
+            products.ForEach(p => p.Image = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, p.Image));
             return Ok(products);
         }
 
@@ -46,13 +50,15 @@ namespace BKShop.API.Controllers
             {
                 //var product = _context.Products.FirstOrDefault(p => p.Id == id);
                 var product = await _productService.GetByIdAsync(Id);
-                if(product == null)
+                product.Image = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, product.Image);
+                if (product == null)
                 {
                     return NotFound($"Cannot find a product with Id: {Id}");
                 }
                 return Ok(product);
 
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 return BadRequest(e.Message);
             }
@@ -60,11 +66,22 @@ namespace BKShop.API.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-
-        public async Task<IActionResult> Create([FromBody]ProductCreateRequest request)
+        // [Consumes("multipart/form-data")]
+        public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
         {
+            //if (request.ImageFile.FileName == "default.jpg")
+            //{
+            //    request.Image = "default.jpg";
+            //}
+            //else
+            //{
+            //    request.Image = await SaveImage(request.ImageFile);
+            //}
+            //var ImageSrc = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, request.Image);
+            //request.Image = ImageSrc;
+
             var productId = await _productService.CreateAsync(request);
-            if (productId == null)
+            if (productId == 0)
             {
                 return BadRequest();
             }
@@ -75,6 +92,44 @@ namespace BKShop.API.Controllers
             }
             return Ok(data);
         }
+
+        [NonAction]
+        public async Task<string> SaveImage(IFormFile imageFile)
+        {
+            string imageName = new String(Path.GetFileNameWithoutExtension(imageFile.FileName).Take(10).ToArray()).Replace(' ', '-');
+            imageName = imageName + DateTime.Now.ToString("yymmssfff") + Path.GetExtension(imageFile.FileName);
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "wwwroot/Upload", imageName);
+            using (var fileStream = new FileStream(imagePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(fileStream);
+            }
+            return imageName;
+        }
+
+
+        [HttpPut]
+        [AllowAnonymous]
+        public async Task<IActionResult> Update([FromForm] ProductUpdateRequest request)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                var result = await _productService.UpdateAsync(request);
+                if (result == 0)
+                {
+                    return BadRequest();
+                }
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
 
         [HttpDelete("{Id}")]
         [Authorize]
@@ -96,30 +151,7 @@ namespace BKShop.API.Controllers
             }
         }
 
-        [HttpPut]
-        [AllowAnonymous]
-        public async Task<IActionResult> Update([FromBody] ProductUpdateRequest request)
-        {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest(ModelState);
-                }
-                var result = await _productService.UpdateAsync(request);
 
-                if (result == 0)
-                {
-                    return BadRequest();
-                }
-
-                return Ok(result);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
-        }
 
         [HttpGet("Paging")]
         [AllowAnonymous]
@@ -143,6 +175,7 @@ namespace BKShop.API.Controllers
             try
             {
                 var data = await _productService.GetByColorAndGroupAsync(color, group);
+                data.ForEach(p => p.Image = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, p.Image));
                 return Ok(data);
             }
             catch (Exception e)
@@ -158,6 +191,7 @@ namespace BKShop.API.Controllers
             try
             {
                 var data = await _productService.GetByCategoryAsync(Id);
+                data.ForEach(p => p.Image = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, p.Image));
                 return Ok(data);
             }
             catch (Exception e)
@@ -173,6 +207,7 @@ namespace BKShop.API.Controllers
             try
             {
                 var data = await _productService.GetByBrandAsync(Id);
+                data.ForEach(p => p.Image = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, p.Image));
                 return Ok(data);
             }
             catch (Exception e)
@@ -188,6 +223,7 @@ namespace BKShop.API.Controllers
             try
             {
                 var data = await _productService.GetByCategoryByBrandAsync(categoryId, brandId);
+                data.ForEach(p => p.Image = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, p.Image));
                 return Ok(data);
             }
             catch (Exception e)
@@ -203,6 +239,7 @@ namespace BKShop.API.Controllers
             try
             {
                 var data = await _productService.GetByAccessoryAsync();
+                data.ForEach(p => p.Image = String.Format("{0}://{1}{2}/Upload/{3}", Request.Scheme, Request.Host, Request.PathBase, p.Image));
                 return Ok(data);
             }
             catch (Exception e)
@@ -213,7 +250,7 @@ namespace BKShop.API.Controllers
 
         [HttpGet("Color/{group}")]
         [AllowAnonymous]
-        public async Task<IActionResult> GetColorByGroup([FromRoute]string group)
+        public async Task<IActionResult> GetColorByGroup([FromRoute] string group)
         {
             try
             {
@@ -242,5 +279,7 @@ namespace BKShop.API.Controllers
             }
             return Ok(product);
         }
+
+
     }
 }
