@@ -68,3 +68,121 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+npm install axios
+npm i customize-cra react-app-rewired -D
+npm install reactstrap
+npm install prop-types
+npm install react-hook-form
+npm install yup
+
+<Form onSubmit={handleSubmit(Add)}>
+        <Row>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="name">Tên</Label>
+              <Input
+                id="name"
+                placeholder="tên sản phẩm"
+                type="text"
+                {...register("name")}
+                value ="aa"
+              />
+            </FormGroup>
+          </Col>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="color">Màu</Label>
+              <Input
+                id="color"
+                placeholder="màu"
+                type="text"
+                {...register("color")}
+              />
+            </FormGroup>
+          </Col>
+        </Row>
+        <FormGroup>
+          <Row>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="brand ">Hãng</Label>
+                <Input
+                  id="brand"
+                  placeholder="hãng"
+                  type="number"
+                  {...register("brandI")}
+                />
+              </FormGroup>
+            </Col>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="category">Loại</Label>
+                <Input
+                  id="category"
+                  placeholder="giá"
+                  type="number"
+                  {...register("categoryId")}
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+        </FormGroup>
+        <FormGroup>
+          <Row>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="capacity ">Dung lượng</Label>
+                <Input
+                  id="capacity"
+                  placeholder="dung lượng"
+                  type="text"
+                  {...register("capacity")}
+                />
+              </FormGroup>
+            </Col>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="price">Giá</Label>
+                <Input
+                  id="price"
+                  placeholder="giá"
+                  type="text"
+                  {...register("price")}
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+        </FormGroup>
+        <FormGroup>
+          <Label for="description">Mô tả</Label>
+          <Input
+            id="description"
+            placeholder="mô tả"
+            {...register("description")}
+          />
+        </FormGroup>
+        <Row>
+          <Col md={6}>
+            {/* <FormGroup>
+              <Label for="exampleFile">File</Label>
+              <Col>
+                <Input id="exampleFile" name="file" type="file" />
+              </Col>
+            </FormGroup> */}
+          </Col>
+          <Col md={3}>
+            <FormGroup>
+              <Label for="stock">Số lượng</Label>
+              <Input id="stock" {...register("stock")} />
+            </FormGroup>
+          </Col>
+          <Col md={3}>
+            <FormGroup>
+              <Label for="group">Nhóm</Label>
+              <Input id="group" {...register("group")} />
+            </FormGroup>
+          </Col>
+        </Row>
+        <Button type="submit">Thêm</Button>
+      </Form>
