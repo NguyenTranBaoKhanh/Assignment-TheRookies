@@ -59,6 +59,7 @@ namespace BKShop.Application.Services
                 Price = request.Price,
                 Stock = request.Stock,
                 Image = request.Image,
+                Group = request.Group,
                 CreatedDate = DateTime.Now,
                 UpdatedDate = DateTime.Now,
 
@@ -95,7 +96,7 @@ namespace BKShop.Application.Services
             //    Capacity = product.Capacity
             //}).ToListAsync();
 
-            return await _context.Products.Select(product => _mapper.Map<ProductViewModel>(product)).ToListAsync();
+            return await _context.Products.OrderByDescending(product => product.Id).Select(product => _mapper.Map<ProductViewModel>(product)).ToListAsync();
 
         }
 
