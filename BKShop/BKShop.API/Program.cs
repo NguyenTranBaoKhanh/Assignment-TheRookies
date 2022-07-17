@@ -8,7 +8,6 @@ using Microsoft.OpenApi.Models;
 using AutoMapper;
 using BKShop.ViewModels.ViewModels;
 using BKShop.Data.Entities;
-using BKShop.Application.System.Users;
 using Microsoft.VisualStudio.Settings;
 using Microsoft.AspNetCore.Identity;
 
@@ -50,6 +49,7 @@ builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IBrandService, BrandService>();
 builder.Services.AddTransient<IReviewService, ReviewService>();
+builder.Services.AddTransient<IUserService, UserService>();
 //builder.Services.AddTransient<IStorageService, StorageService>();
 
 // DI for identity
@@ -75,6 +75,8 @@ app.UseCors("CORS");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseStaticFiles();
 
 app.MapControllers();
 

@@ -18,7 +18,7 @@ namespace BKShop.API.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAsync()
         {
             var feedbacks = await _reviewService.GetAllAsync();
             if (feedbacks == null)
@@ -30,7 +30,7 @@ namespace BKShop.API.Controllers
 
         [HttpGet("{Id}")]
         [AllowAnonymous]
-        public async Task<IActionResult> Get([FromRoute]int Id)
+        public async Task<IActionResult> GetAsync([FromRoute]int Id)
         {
             var feedbacks = await _reviewService.GetByIdAsync(Id);
             if (feedbacks == null)

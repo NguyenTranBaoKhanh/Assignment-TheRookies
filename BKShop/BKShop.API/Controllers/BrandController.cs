@@ -11,7 +11,6 @@ namespace BKShop.API.Controllers
     [ApiController]
     public class BrandController : ControllerBase
     {
-        private readonly BKShopDbContext _context;
         private readonly IBrandService _brandService;
         public BrandController(IBrandService brandService)
         {

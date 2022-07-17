@@ -1,7 +1,6 @@
 ﻿using BKShop.BackendApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using BKShop.BackendApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

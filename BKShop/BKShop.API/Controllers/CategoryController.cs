@@ -11,7 +11,6 @@ namespace BKShop.API.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
-        private readonly BKShopDbContext _context;
         private readonly ICategoryService _categoryService;
         public CategoryController(ICategoryService categoryService )
         {
