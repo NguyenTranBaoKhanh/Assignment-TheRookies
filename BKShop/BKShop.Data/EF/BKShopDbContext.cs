@@ -50,6 +50,8 @@ namespace BKShop.Data.EF
         public DbSet<Order> Orders { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Cart> Carts { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
 
 

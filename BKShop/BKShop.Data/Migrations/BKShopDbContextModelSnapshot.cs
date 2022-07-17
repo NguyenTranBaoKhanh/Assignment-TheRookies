@@ -422,7 +422,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "8/128",
                             CategoryId = 1,
                             Color = "Xanh",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8104),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8505),
                             Description = "Hệ thống camera sau được trang bị tối tân, trong đó có camera chính 64 MP, camera góc siêu rộng 8 MP và camera macro 2 MP cùng camera trước 32 MP luôn sẵn sàng bắt trọn mọi cảm xúc trong khung hình, giúp người dùng thoải mái ghi lại những khoảnh khắc trong cuộc sống một cách ấn tượng nhất.",
                             Group = "reno6z",
                             Image = "oppo-reno6-z-5g-aurora.jpg",
@@ -431,7 +431,7 @@ namespace BKShop.Data.Migrations
                             Price = 1000000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8113)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8514)
                         },
                         new
                         {
@@ -440,7 +440,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "4/64",
                             CategoryId = 1,
                             Color = "Đen",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8114),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8526),
                             Description = "Apple đã trang bị con chip mới nhất của hãng (tính đến 11/2020) cho iPhone 12 đó là A14 Bionic, được sản xuất trên tiến trình 5 nm với hiệu suất ổn định hơn so với chip A13 được trang bị trên phiên bản tiền nhiệm iPhone 11.",
                             Group = "ip12",
                             Image = "iphone-12-mini-den.jpg",
@@ -449,7 +449,7 @@ namespace BKShop.Data.Migrations
                             Price = 1000000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8115)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8527)
                         },
                         new
                         {
@@ -458,7 +458,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "4/64",
                             CategoryId = 2,
                             Color = "Xanh",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8117),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8530),
                             Description = "Samsung chính thức trình làng mẫu máy tính bảng có tên Galaxy Tab S7 FE, máy trang bị cấu hình mạnh mẽ, màn hình giải trí siêu lớn và điểm ấn tượng nhất là viên pin siêu khủng được tích hợp bên trong, giúp tăng hiệu suất làm việc nhưng vẫn có tính di động cực cao. Galaxy Tab S7 FE sẽ khiến bạn choáng ngợp với dụng lượng pin cực khủng 10090 mAh đảm bảo cho cường độ làm việc, giải trí liên tục trong nhiều giờ liền.",
                             Group = "ts7fe",
                             Image = "samsung-galaxy-tab-s7-fe-green.jpg",
@@ -467,7 +467,7 @@ namespace BKShop.Data.Migrations
                             Price = 10000000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8117)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8531)
                         },
                         new
                         {
@@ -476,7 +476,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "4/64",
                             CategoryId = 1,
                             Color = "xanh",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8119),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8533),
                             Description = "Xiaomi duy trì sự trẻ trung trong thiết kế của mình từ Redmi 9A, Redmi 9C và đến hiện tại là Redmi 9T, chiếc điện thoại mang đến tùy chọn màu nổi bật, rất phù hợp với cá tính năng động của giới trẻ.",
                             Group = "red9t",
                             Image = "xiaomi-redmi-9t-xanh.jpg",
@@ -485,7 +485,7 @@ namespace BKShop.Data.Migrations
                             Price = 4950000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8119)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8534)
                         },
                         new
                         {
@@ -494,7 +494,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "8/256",
                             CategoryId = 1,
                             Color = "xanh",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8121),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8537),
                             Description = "Xiaomi Mi 11 một siêu phẩm đến từ Xiaomi, máy cho trải nghiệm hiệu năng hàng đầu với vi xử lý Qualcomm Snapdragon 888, cùng loạt công nghệ đỉnh cao, khiến bất kỳ ai cũng sẽ choáng ngợp về smartphone này. Có thể thấy, điểm sáng trong thiết kế của Mi 11 đến từ cụm 3 camera mặt sau được đặt trong mô-đun hình vuông, được phân tầng với 2 lớp kính tạo nên sự khác biệt và nổi bật ngay từ cái nhìn đầu tiên.",
                             Group = "m11",
                             Image = "xiaomi-mi-11-xanhduong.jpg",
@@ -503,7 +503,7 @@ namespace BKShop.Data.Migrations
                             Price = 16990000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8121)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8537)
                         },
                         new
                         {
@@ -512,7 +512,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "4/64",
                             CategoryId = 1,
                             Color = "xanh",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8123),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8540),
                             Description = "Apple đã trang bị con chip mới nhất của hãng (tính đến 11/2020) cho iPhone 12 đó là A14 Bionic, được sản xuất trên tiến trình 5 nm với hiệu suất ổn định hơn so với chip A13 được trang bị trên phiên bản tiền nhiệm iPhone 11.",
                             Group = "ip12",
                             Image = "iphone-12-violet.jpg",
@@ -521,7 +521,7 @@ namespace BKShop.Data.Migrations
                             Price = 20490000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8123)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8541)
                         },
                         new
                         {
@@ -530,7 +530,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "4/64",
                             CategoryId = 1,
                             Color = "xanh",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8125),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8543),
                             Description = "Apple đã trang bị con chip mới nhất của hãng (tính đến 11/2020) cho iPhone 12 đó là A14 Bionic, được sản xuất trên tiến trình 5 nm với hiệu suất ổn định hơn so với chip A13 được trang bị trên phiên bản tiền nhiệm iPhone 11.",
                             Group = "ip12",
                             Image = "iphone-12-xanh-duong.jpg",
@@ -539,7 +539,7 @@ namespace BKShop.Data.Migrations
                             Price = 20490000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8125)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8544)
                         },
                         new
                         {
@@ -548,7 +548,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "6/128",
                             CategoryId = 1,
                             Color = "xanh",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8127),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8547),
                             Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
                             Group = "ip12pm",
                             Image = "iphone-12-pro-max-xanh-duong.jpg",
@@ -557,7 +557,7 @@ namespace BKShop.Data.Migrations
                             Price = 30000000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8127)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8547)
                         },
                         new
                         {
@@ -566,7 +566,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "6/128",
                             CategoryId = 1,
                             Color = "đen",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8129),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8550),
                             Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
                             Group = "ip12pm",
                             Image = "iphone-12-pro-max-den.jpg",
@@ -575,7 +575,7 @@ namespace BKShop.Data.Migrations
                             Price = 30000000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8129)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8551)
                         },
                         new
                         {
@@ -584,7 +584,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "6/128",
                             CategoryId = 1,
                             Color = "bạc",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8137),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8553),
                             Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
                             Group = "ip12pm",
                             Image = "iphone-12-pro-bac.jpg",
@@ -593,7 +593,7 @@ namespace BKShop.Data.Migrations
                             Price = 30000000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8138)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8554)
                         },
                         new
                         {
@@ -602,7 +602,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "6/128",
                             CategoryId = 1,
                             Color = "vàng",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8140),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8556),
                             Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
                             Group = "ip12pm",
                             Image = "iphone-12-pro-max-vang.jpg",
@@ -611,7 +611,7 @@ namespace BKShop.Data.Migrations
                             Price = 30000000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8140)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8557)
                         },
                         new
                         {
@@ -620,7 +620,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "6/256",
                             CategoryId = 1,
                             Color = "đen",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8142),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8560),
                             Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
                             Group = "ip12pm",
                             Image = "iphone-12-pro-max-den.jpg",
@@ -629,7 +629,7 @@ namespace BKShop.Data.Migrations
                             Price = 32500000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8142)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8561)
                         },
                         new
                         {
@@ -638,7 +638,7 @@ namespace BKShop.Data.Migrations
                             Capacity = "6/256",
                             CategoryId = 1,
                             Color = "bạc",
-                            CreatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8144),
+                            CreatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8563),
                             Description = "Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.",
                             Group = "ip12pr",
                             Image = "iphone-12-pro-bac.jpg",
@@ -647,7 +647,7 @@ namespace BKShop.Data.Migrations
                             Price = 32500000,
                             Stars = 0.0,
                             Stock = 10,
-                            UpdatedDate = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8144)
+                            UpdatedDate = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8564)
                         });
                 });
 
@@ -694,7 +694,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 1,
                             Comment = "Máy đẹp",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8193),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8635),
                             ProductId = 1,
                             Star = 5,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -703,7 +703,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 2,
                             Comment = "Tuyệt lắm",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8196),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8640),
                             ProductId = 1,
                             Star = 4,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -712,7 +712,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 3,
                             Comment = "Máy hơi yếu",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8198),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8643),
                             ProductId = 2,
                             Star = 2,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -721,7 +721,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 4,
                             Comment = "Máy còn yếu lắm",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8199),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8645),
                             ProductId = 2,
                             Star = 3,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -730,7 +730,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 5,
                             Comment = "Ngon đó",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8201),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8648),
                             ProductId = 2,
                             Star = 4,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -739,7 +739,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 6,
                             Comment = "Good",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8203),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8651),
                             ProductId = 3,
                             Star = 5,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -748,7 +748,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 7,
                             Comment = "Yeah",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8204),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8653),
                             ProductId = 3,
                             Star = 4,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -757,7 +757,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 8,
                             Comment = "Đây là comment",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8206),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8656),
                             ProductId = 3,
                             Star = 4,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -766,7 +766,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 9,
                             Comment = "Màu sắc đẹp",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8207),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8659),
                             ProductId = 2,
                             Star = 5,
                             UserId = new Guid("bff91064-dc92-421e-a233-d1080f630928")
@@ -775,7 +775,7 @@ namespace BKShop.Data.Migrations
                         {
                             Id = 10,
                             Comment = "Máy mạnh",
-                            DateCreated = new DateTime(2022, 7, 4, 22, 36, 0, 425, DateTimeKind.Local).AddTicks(8209),
+                            DateCreated = new DateTime(2022, 7, 14, 0, 32, 36, 413, DateTimeKind.Local).AddTicks(8661),
                             ProductId = 1,
                             Star = 5,
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
@@ -808,7 +808,7 @@ namespace BKShop.Data.Migrations
                         new
                         {
                             Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "6eabeab1-cfbb-4bf8-80a5-77a89b258703",
+                            ConcurrencyStamp = "4d098527-53b9-4ce3-a77c-a56527dbf4de",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -816,7 +816,7 @@ namespace BKShop.Data.Migrations
                         new
                         {
                             Id = new Guid("54ba416f-6b89-4c53-873d-4fbd48506e6d"),
-                            ConcurrencyStamp = "82141de6-9c4e-4391-84ec-af7e0d2f45bf",
+                            ConcurrencyStamp = "3e818270-f05d-4df6-89d0-610f15841506",
                             Description = "Customer role",
                             Name = "customer",
                             NormalizedName = "customer"
@@ -893,14 +893,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "03540932-6793-45c8-988b-54f52f88b9b0",
+                            ConcurrencyStamp = "fcb65454-b670-4035-91af-9b88afa7dcaa",
                             Email = "khanh@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Bao Khanh",
                             NormalizedEmail = "khanh@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHC/63g0C4tcpvI3c1WT2f5SXBf//39nb4L0uDi0hIi5JlDw6PT0744Qv4X318Eg/Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPH6p7Te8JqGPwp09LHTqVP3iwUynGNcssoz+3rLQFtPVopgR9JEsF9cSO/8KERlWA==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -912,14 +912,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("bff91064-dc92-421e-a233-d1080f630928"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "b67fbc57-9f2f-400c-99b8-5406388a2b08",
+                            ConcurrencyStamp = "7da374a3-4d7e-4d0c-8b96-6597e91cb5e5",
                             Email = "customer1@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Bao Khanh Customer",
                             NormalizedEmail = "customer1@gmail.com",
                             NormalizedUserName = "customer",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJm6Hm8kAv51EkvPVc97jonzak0mTiN3ydTYC9to5H0XL9zAQHggXsKJjhTe8Qm6SQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEI5p0d9yYVlRfScfbLuMBx+wvR/IWrEEAI7BRvZAJ3C0oz966GcAA/4QDIaIXD5LnA==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -931,14 +931,14 @@ namespace BKShop.Data.Migrations
                             Id = new Guid("bff91054-dc92-421e-a233-d1080f630928"),
                             AccessFailedCount = 0,
                             Address = "AG",
-                            ConcurrencyStamp = "4d40108c-b6e5-4c3d-a51c-fe52d38d3cf2",
+                            ConcurrencyStamp = "0a0f63fa-e174-424c-91c9-e1acf08c5975",
                             Email = "customer2@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "David",
                             NormalizedEmail = "customer2@gmail.com",
                             NormalizedUserName = "customer",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBCmg0RFwzCU0az7Kg7Vkj/zhpC35xRhefb4zdXDFBQlF6pehrR/pNtaCnBUi0J9Dg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJqSrbKZ+e0SCQq2wsAtZXhEeE1uuLTNvbH1H0Y9FIXChLcLWvZu7SDoZg6LgQRs0A==",
                             Phone = "0123456789",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
