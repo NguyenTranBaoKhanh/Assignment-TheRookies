@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BKShop.ApiIntegration", "BK
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BKShop.CustomersSite", "BKShop.CustomersSite\BKShop.CustomersSite.csproj", "{4F590929-3D47-4C2D-800B-706F4ED3FE6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BKShop.UnitTest", "BKShop.UnitTest\BKShop.UnitTest.csproj", "{DB4D1BEE-47B0-466C-9332-7F94BFB16834}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4F590929-3D47-4C2D-800B-706F4ED3FE6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F590929-3D47-4C2D-800B-706F4ED3FE6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F590929-3D47-4C2D-800B-706F4ED3FE6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4D1BEE-47B0-466C-9332-7F94BFB16834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4D1BEE-47B0-466C-9332-7F94BFB16834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4D1BEE-47B0-466C-9332-7F94BFB16834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4D1BEE-47B0-466C-9332-7F94BFB16834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
