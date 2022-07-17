@@ -16,7 +16,7 @@ namespace BKShop.Application.Services
     public class BrandService : IBrandService
     {
         private readonly BKShopDbContext _context;
-        public BrandService (BKShopDbContext context)
+        public BrandService(BKShopDbContext context)
         {
             _context = context;
         }
@@ -38,7 +38,7 @@ namespace BKShop.Application.Services
         public async Task<int> DeleteAsync(int brandId)
         {
             var brand = await _context.Brands.Where(x => x.Id == brandId).FirstOrDefaultAsync();
-            if(brand == null)
+            if (brand == null)
             {
                 throw new BKShopException($"Cannot find brand with Id = {brandId}");
             }
@@ -88,6 +88,7 @@ namespace BKShop.Application.Services
         public async Task<int> UpdateAsync(BrandUpdateRequest request)
         {
             var brand = await _context.Brands.FindAsync(request.Id);
+            if (brand.Name == request.Name) return 1;
             if (brand == null)
             {
                 throw new BKShopException($"Cannot find brand with Id = {request.Id}");
