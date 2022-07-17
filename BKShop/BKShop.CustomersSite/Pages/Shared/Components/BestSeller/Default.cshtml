@@ -11,7 +11,7 @@
             <div class="swiper-slide">
                 <a asp-page="detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
                     <div class="wipper__item">
-                        <div class="wipper__item__img" style="background-image: url(/themes/img/@item.Image);"></div>
+                        <div class="wipper__item__img" style="background-image: url(@item.Image);"></div>
                         <h4 class="wipper__item__name">@item.Name</h4>
                         <div class="wipper__item__price d-flex-end">
                             <span class="wipper__item__price-old">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</span>

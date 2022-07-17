@@ -51,7 +51,7 @@
         <hr>
         <div class="d-flex productDetails">
             <div class="productDetail-left">
-                <img id="zoom" src="/themes/img/@Model._homeViewModel.Product.Image" alt="" class="productDetails__img">
+                <img id="zoom" src="@Model._homeViewModel.Product.Image" alt="" class="productDetails__img">
             </div>
             <div class="productDetail-center">
                 <div class="productDetails_price">
@@ -114,7 +114,7 @@
                     <div class="swiper-slide">
                         <a asp-page="Detail" asp-route-Id="@item.Id" asp-route-Color="@item.Color">
                             <div class="wipper__item">
-                                <div class="wipper__item__img" style="background-image: url(/themes/img/@item.Image);"></div>
+                                <div class="wipper__item__img" style="background-image: url(@item.Image);"></div>
                                 <h4 class="wipper__item__name">@item.Name</h4>
                                 <div class="wipper__item__price d-flex-end">
                                     <span class="wipper__item__price-old">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",@item.Price)</span>
