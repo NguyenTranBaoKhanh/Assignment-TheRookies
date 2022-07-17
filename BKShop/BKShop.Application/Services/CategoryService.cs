@@ -104,6 +104,9 @@ namespace BKShop.Application.Services
             {
                 throw new BKShopException($"Cannot find category with Id = {request.Id}");
             }
+            if(category.Name == request.Name){
+                return 1;
+            }
             category.Name = request.Name;
             return await _context.SaveChangesAsync();
         }
